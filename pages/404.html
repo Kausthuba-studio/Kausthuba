@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Scene Not Found | KAUSTHUBA AI Creative Studio</title>
+    
+    <!-- External Animation & Styling Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#050505',
+                        'brand-white': '#fdfdfd',
+                        'brand-ruby': '#9B111E',
+                        'brand-ruby-pale': '#E05252',
+                        'brand-gold': '#D4AF37',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Browser Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #9B111E;
+            border-radius: 9999px;
+            border: 3px solid #050505;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #D4AF37;
+        }
+        html {
+            scroll-behavior: auto !important;
+        }
+        html.lenis {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfd;
+        }
+
+        /* Navbar Link Underline Animation */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1.5px;
+            background-color: #9B111E;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Individual Letter Hover (Red Outline Only) */
+        .letter {
+            display: inline-block;
+            color: #050505;
+            transition: color 0.15s ease, -webkit-text-stroke 0.15s ease;
+            cursor: pointer;
+        }
+
+        .letter:hover {
+            color: transparent !important;
+            -webkit-text-stroke: 2px #9B111E !important;
+            text-shadow: none !important;
+            background: transparent !important;
+        }
+
+        .marquee-inner {
+            width: max-content;
+            will-change: transform;
+        }
+
+        /* Red Outlined Grid Wall Background */
+        .inquiry-grid-wall {
+            background-image: 
+                linear-gradient(to right, rgba(155, 17, 30, 0.35) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(155, 17, 30, 0.35) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0.05) 90%);
+            -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0.05) 90%);
+        }
+
+        /* Glassmorphic Card Crosshairs */
+        .glass-card-crosshair {
+            position: relative;
+        }
+        .glass-card-crosshair::before {
+            content: "+";
+            position: absolute;
+            top: -12px;
+            left: -10px;
+            font-family: monospace;
+            font-size: 14px;
+            color: #9B111E;
+            font-weight: 800;
+        }
+        .glass-card-crosshair::after {
+            content: "+";
+            position: absolute;
+            bottom: -12px;
+            right: -10px;
+            font-family: monospace;
+            font-size: 14px;
+            color: #9B111E;
+            font-weight: 800;
+        }
+
+        /* Glitch text effect */
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+        .glitch-hover:hover {
+            animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/site-renderer.js"></script>
+</head>
+<body class="antialiased bg-brand-white text-brand-black overflow-x-hidden selection:bg-brand-ruby selection:text-white">
+
+                                <!-- =========================================================================
+     HEADER / NAVBAR (UNIFIED TYPOGRAPHY & TEXT-HOVER STYLE)
+     ========================================================================= -->
+    <header class="fixed md:absolute top-0 left-0 w-full z-50 px-4 md:px-12 py-3 md:py-8 bg-white/80 md:bg-transparent backdrop-blur-xl md:backdrop-blur-none border-b border-black/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.03)] transition-all duration-500" id="navbar">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center text-brand-black">
+            
+            <!-- Brand Logo -->
+            <a href="../index.html#hero" class="flex items-center gap-3 group">
+                <img src="../assets/images/kausthuba-logo.png" alt="Kausthuba Studio Logo" class="h-9 w-9 rounded-full object-cover border border-brand-ruby shadow-md transition-transform duration-300 group-hover:scale-110" />
+                <div class="flex flex-col text-left">
+                    <span class="text-xs font-black tracking-[0.25em] uppercase text-brand-black">KAUSTHUBA</span>
+                    <span class="text-[9px] font-mono tracking-widest text-brand-ruby uppercase">AI Creative Studio</span>
+                </div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="hidden md:flex items-center space-x-8 lg:space-x-10 text-xs font-bold tracking-[0.2em] uppercase text-gray-700">
+                <!-- Home -->
+                <li>
+                    <a href="../index.html#hero" class="nav-link relative py-1 hover:text-brand-ruby transition-colors">Home</a>
+                </li>
+
+                <!-- Studio Dropdown -->
+                <li class="relative group py-1">
+                    <a href="../index.html#about" class="nav-link inline-flex items-center gap-1.5 hover:text-brand-ruby transition-colors cursor-pointer">
+                        Studio <span class="text-[8px] transition-transform duration-300 group-hover:rotate-180 text-brand-ruby">▼</span>
+                    </a>
+                    <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-black/10 shadow-xl space-y-2 text-[10px] font-bold tracking-[0.15em] uppercase text-gray-700">
+                            <a href="../index.html#about" class="block py-1.5 px-2 hover:text-brand-ruby transition-colors">
+                                Studio Overview
+                            </a>
+                            <a href="../index.html#stack-container" class="block py-1.5 px-2 hover:text-brand-ruby transition-colors">
+                                The Kausthuba Edge
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Process Dropdown -->
+                <li class="relative group py-1">
+                    <a href="../index.html#working-process-section" class="nav-link inline-flex items-center gap-1.5 hover:text-brand-ruby transition-colors cursor-pointer">
+                        Process <span class="text-[8px] transition-transform duration-300 group-hover:rotate-180 text-brand-ruby">▼</span>
+                    </a>
+                    <div class="absolute left-0 top-full pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-black/10 shadow-xl space-y-2 text-[10px] font-bold tracking-[0.15em] uppercase text-gray-700">
+                            <a href="../index.html#commercial-standard" class="block py-1.5 px-2 hover:text-brand-ruby transition-colors">
+                                120-Second Commercial Arc
+                            </a>
+                            <a href="../index.html#pipeline-diamond-section" class="block py-1.5 px-2 hover:text-brand-ruby transition-colors">
+                                Production Pipeline
+                            </a>
+                            <a href="../index.html#s06-sprint-section" class="block py-1.5 px-2 hover:text-brand-ruby transition-colors">
+                                Creative Design Sprint
+                            </a>
+                            <a href="../index.html#working-process-section" class="block py-1.5 px-2 hover:text-brand-ruby transition-colors">
+                                Production Schedule
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Our Work -->
+                <li>
+                    <a href="../index.html#s09a-wall-of-works" class="nav-link relative py-1 hover:text-brand-ruby transition-colors">Our Work</a>
+                </li>
+
+                <!-- Client Reviews -->
+                <li>
+                    <a href="../index.html#sec-testimonials" class="nav-link relative py-1 hover:text-brand-ruby transition-colors">Client Reviews</a>
+                </li>
+
+                <!-- FAQ -->
+                <li>
+                    <a href="../index.html#sec-faq" class="nav-link relative py-1 hover:text-brand-ruby transition-colors">FAQ</a>
+                </li>
+            </ul>
+
+            <!-- Header Actions: Start a Project + Mobile Menu Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="../index.html#sec-inquiry" class="hidden sm:inline-flex items-center justify-center border border-brand-black px-4 md:px-6 py-2 md:py-2.5 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase hover:bg-brand-ruby hover:border-brand-ruby hover:text-white transition-all duration-300">
+                    Start a Project ↗
+                </a>
+
+                <!-- Mobile Hamburger Menu Button (3 horizontal bars) -->
+                <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-black/5 hover:bg-brand-ruby/10 border border-black/10 transition-all p-2.5 z-50 cursor-pointer shadow-sm" aria-label="Toggle Mobile Navigation">
+                    <span class="w-5 h-[2px] bg-brand-black transition-all duration-300 origin-center mb-1.5 bar-top rounded-full"></span>
+                    <span class="w-5 h-[2px] bg-brand-ruby transition-all duration-300 origin-center mb-1.5 bar-mid rounded-full"></span>
+                    <span class="w-5 h-[2px] bg-brand-black transition-all duration-300 origin-center bar-bot rounded-full"></span>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- =========================================================================
+     MOBILE NAVIGATION DRAWER OVERLAY (STREAMLINED & UNIFIED WITH TOPBAR NAVBAR)
+     ========================================================================= -->
+    <div id="mobile-nav-drawer" class="fixed inset-0 h-[100dvh] max-h-[100dvh] z-[9999] opacity-0 pointer-events-none transition-all duration-300 flex flex-col justify-between p-5 sm:p-7 md:hidden overflow-hidden">
+        
+        <!-- Top bar with brand and close button (Fixed Header) -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3.5 shrink-0">
+            <a href="../index.html#hero" class="flex items-center gap-3 mobile-nav-link group">
+                <img src="../assets/images/kausthuba-logo.png" alt="Kausthuba Logo" class="w-9 h-9 rounded-full border border-brand-ruby shadow-md" />
+                <div class="flex flex-col text-left">
+                    <span class="text-xs font-black tracking-[0.25em] uppercase text-white font-mono">KAUSTHUBA</span>
+                    <span class="text-[9px] font-mono tracking-widest text-brand-ruby uppercase">AI Creative Studio</span>
+                </div>
+            </a>
+            <button id="mobile-menu-close" class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center font-mono text-base border border-white/15 hover:bg-brand-ruby hover:border-brand-ruby transition-all cursor-pointer shadow-md" aria-label="Close Navigation Menu">
+                ✕
+            </button>
+        </div>
+
+        <!-- Scrollable Links List (Aligned with Topbar Navbar & No Numbers) -->
+        <div id="mobile-nav-links-scroll" class="flex-1 min-h-0 overflow-y-auto py-3 space-y-3 font-mono text-xs uppercase tracking-wider pr-1.5 my-1.5">
+            
+            <!-- Home -->
+            <div>
+                <a href="../index.html#hero" class="mobile-nav-link mobile-nav-item block py-2 px-3 rounded-xl text-white/95 hover:text-white flex items-center justify-between font-bold text-sm">
+                    <span>Home</span>
+                    <span class="text-brand-ruby text-sm opacity-60">→</span>
+                </a>
+            </div>
+
+            <!-- Studio Group -->
+            <div class="space-y-1">
+                <span class="text-[9px] text-brand-ruby font-bold tracking-[0.25em] block px-3 mb-1">// STUDIO</span>
+                <a href="../index.html#about" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>Studio Overview</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+                <a href="../index.html#stack-container" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>The Kausthuba Edge</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+            </div>
+
+            <!-- Process Group -->
+            <div class="space-y-1">
+                <span class="text-[9px] text-brand-ruby font-bold tracking-[0.25em] block px-3 mb-1">// PROCESS</span>
+                <a href="../index.html#commercial-standard" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>120s Commercial Arc</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+                <a href="../index.html#pipeline-diamond-section" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>Production Pipeline</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+                <a href="../index.html#s06-sprint-section" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>Creative Design Sprint</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+                <a href="../index.html#working-process-section" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>Production Schedule</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+            </div>
+
+            <!-- Work & FAQ -->
+            <div class="space-y-1">
+                <span class="text-[9px] text-brand-ruby font-bold tracking-[0.25em] block px-3 mb-1">// WORK & FAQ</span>
+                <a href="../index.html#s09a-wall-of-works" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>Our Work</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+                <a href="../index.html#sec-testimonials" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>Client Reviews</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+                <a href="../index.html#sec-faq" class="mobile-nav-link mobile-nav-item block py-1.5 px-3 rounded-xl text-white/85 hover:text-white flex items-center justify-between font-bold">
+                    <span>FAQ</span>
+                    <span class="text-brand-ruby text-xs opacity-60">→</span>
+                </a>
+            </div>
+
+            <div class="h-6 shrink-0"></div>
+        </div>
+
+        <!-- Bottom Action CTA & Coordinates (Fixed Footer with Safe-Area Clearance) -->
+        <div class="pt-3 border-t border-white/10 space-y-2.5 shrink-0 bg-[#08090c]/60 backdrop-blur-md">
+            <a href="../index.html#sec-inquiry" class="mobile-nav-link w-full py-3 bg-gradient-to-r from-[#9B111E] to-[#7a0d17] hover:from-[#b51423] hover:to-[#9B111E] text-white font-mono text-xs font-bold uppercase tracking-widest rounded-xl text-center flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(155,17,30,0.35)] border border-[#9B111E]/50 transition-all">
+                <span>START A PROJECT COMMISSION</span>
+                <span>↘</span>
+            </a>
+            <div class="flex justify-between items-center text-[9px] font-mono text-gray-400">
+                <span>RAJAHMUNDRY, AP, INDIA</span>
+                <span class="text-brand-ruby font-bold">IST UTC +5:30</span>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <section class="relative min-h-[105vh] flex flex-col items-center justify-between pt-36 md:pt-44 pb-16 px-4 text-center overflow-hidden" id="hero-404">
+        
+        <!-- Header HUD Metadata Bar -->
+        <div class="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.25em] text-gray-400 flex justify-between w-full max-w-7xl px-2 md:px-4 z-10">
+            <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-ruby animate-ping"></span>
+                // ERROR: 404_SCENE_NOT_FOUND
+            </span>
+            <span>// FRAME OUT OF BOUNDS</span>
+        </div>
+        
+        <div class="my-auto py-8 md:py-16 w-full max-w-7xl z-10">
+            
+            <!-- Oversized Title with 3D Gem Embedded in Center -->
+            <h1 class="text-[12vw] sm:text-[11vw] lg:text-[10vw] font-black tracking-tighter leading-none flex flex-col items-center justify-center gap-1 md:gap-3 z-10 hero-title select-none w-full">
+                
+                <!-- Top Line: 404 Display with 3D Gem Canvas -->
+                <div class="flex items-center justify-center gap-3 sm:gap-5 md:gap-8 w-full">
+                    <span class="word flex">
+                        <span class="letter">4</span>
+                    </span>
+                    
+                    <!-- 3D Ruby Gem Canvas Canvas -->
+                    <canvas id="ruby-canvas" class="w-[14vw] h-[15.5vw] max-w-[170px] max-h-[190px] min-w-[80px] min-h-[90px] inline-block align-middle my-auto shrink-0 relative -top-2 filter drop-shadow-[0_12px_30px_rgba(139,0,0,0.3)]"></canvas>
+                    
+                    <span class="word flex">
+                        <span class="letter">4</span>
+                    </span>
+                </div>
+
+                <!-- Subtitle Line: SCENE CUT -->
+                <div class="flex items-center justify-center w-full mt-2">
+                    <span class="word flex text-[4vw] sm:text-[3.5vw] lg:text-[2.8vw] font-mono tracking-[0.2em] text-brand-ruby uppercase font-extrabold">
+                        [ SCENE NOT FOUND ]
+                    </span>
+                </div>
+
+            </h1>
+            
+            <p class="mt-6 md:mt-8 text-xs sm:text-sm md:text-base text-gray-500 font-medium max-w-xs sm:max-w-md md:max-w-2xl mx-auto tracking-wide px-4 leading-relaxed font-sans">
+                The frame or scene you are looking for was cut during final editing or never existed in our production timeline. Let’s guide you back to the main story.
+            </p>
+
+            <!-- Diagnostic HUD Card -->
+            <div class="mt-8 md:mt-10 max-w-md mx-auto bg-[#050505] text-white p-5 md:p-6 rounded-2xl border border-brand-ruby/40 shadow-2xl glass-card-crosshair text-left">
+                <div class="flex items-center justify-between border-b border-white/10 pb-2.5 mb-3">
+                    <span class="text-[9px] font-mono text-brand-ruby font-bold tracking-widest uppercase">// DIAGNOSTIC REPORT</span>
+                    <span class="text-[9px] font-mono text-gray-500">SYS_ERR_404</span>
+                </div>
+                <div class="space-y-1.5 font-mono text-[10px] md:text-[11px]">
+                    <div class="flex justify-between"><span class="text-gray-400">• STATUS:</span> <span class="text-red-400 font-bold">FRAME_MISSING</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">• CURRENT TIMELINE:</span> <span class="text-white">KAUSTHUBA_STUDIO_2026</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">• RECOMMENDED ROUTE:</span> <span class="text-brand-ruby font-bold">MAIN_HERO_ARC</span></div>
+                </div>
+            </div>
+
+            <!-- Action Buttons Row -->
+            <div class="mt-8 md:mt-12 flex flex-wrap justify-center items-center gap-4">
+                <!-- Return Home Button -->
+                <a href="index.html#hero" class="btn-more-about group relative inline-flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border-2 border-brand-black shadow-[0_15px_35px_rgba(0,0,0,0.25)] hover:border-brand-ruby transition-all duration-300 overflow-hidden">
+                    <span class="absolute inset-0 bg-brand-ruby -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
+                    <span class="relative z-10 text-white transition-colors duration-300">Return to Home ↗</span>
+                </a>
+
+                <!-- View Our Work Button -->
+                <a href="index.html#s09a-wall-of-works" class="inline-flex items-center gap-2 border border-brand-black px-8 py-4 rounded-full text-xs font-bold tracking-[0.2em] uppercase hover:bg-brand-ruby hover:border-brand-ruby hover:text-white transition-all duration-300 bg-white">
+                    Explore Our Work
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Marquee Ticker -->
+        <div class="w-full overflow-hidden whitespace-nowrap z-20 py-4 md:py-5 bg-brand-black text-brand-white border-y border-white/10">
+            <div class="marquee-inner flex text-[4vw] sm:text-[3.5vw] lg:text-[2.5vw] font-black tracking-tight uppercase" id="marquee">
+                <span class="px-6 text-brand-white">SCENE 404 — FRAME NOT FOUND</span>
+                <span class="px-6 text-brand-ruby">✦</span>
+                <span class="px-6 text-brand-white">RETRYING CREATIVE TIMELINE</span>
+                <span class="px-6 text-brand-ruby">✦</span>
+                <span class="px-6 text-brand-white">SCENE 404 — FRAME NOT FOUND</span>
+                <span class="px-6 text-brand-ruby">✦</span>
+                <span class="px-6 text-brand-white">RETRYING CREATIVE TIMELINE</span>
+                <span class="px-6 text-brand-ruby">✦</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================================
+     404 DIRECT NAVIGATION OPTIONS (DARK CANVAS WITH RUBY ACCENTS)
+     ========================================================================= -->
+    <section class="bg-brand-black text-brand-white relative py-24 md:py-36 px-4 sm:px-8 w-full z-30 overflow-hidden border-t border-white/10" id="quick-links">
+        
+        <!-- Ambient Backlight -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-ruby/15 blur-[160px] pointer-events-none rounded-full"></div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+                <span class="inline-block text-[10px] md:text-xs font-mono uppercase tracking-[0.35em] text-brand-ruby font-bold mb-2">
+                    // REROUTE DIRECTORY
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tighter text-white uppercase leading-none mb-4">
+                    Where Would You Like To Go?
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-400 font-medium leading-relaxed max-w-xl mx-auto">
+                    Select a section below to jump straight to the relevant part of our studio portfolio or production process.
+                </p>
+            </div>
+
+            <!-- Quick Jump Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- Option 1: Commercial Standard -->
+                <a href="index.html#commercial-standard" class="group relative rounded-2xl bg-[#0a0a0a] border border-white/10 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-xl">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-6">
+                        <span class="text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 px-2.5 py-1 rounded">01 / PROCESS</span>
+                        <span class="text-xs text-gray-500 group-hover:text-white transition-colors">↗</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white mb-2 font-sans group-hover:text-brand-ruby transition-colors">120s Commercial Arc</h3>
+                        <p class="text-xs text-gray-400 font-sans leading-relaxed">
+                            Discover our 5-stage storytelling framework designed to capture retention and build brand trust.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-3 border-t border-white/10 text-[9px] font-mono text-gray-500 group-hover:text-white uppercase tracking-wider">
+                        EXPLORE STORY ARC →
+                    </div>
+                </a>
+
+                <!-- Option 2: Our Work -->
+                <a href="index.html#s09a-wall-of-works" class="group relative rounded-2xl bg-[#0a0a0a] border border-white/10 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-xl">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-6">
+                        <span class="text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 px-2.5 py-1 rounded">02 / PORTFOLIO</span>
+                        <span class="text-xs text-gray-500 group-hover:text-white transition-colors">↗</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white mb-2 font-sans group-hover:text-brand-ruby transition-colors">Wall of Works</h3>
+                        <p class="text-xs text-gray-400 font-sans leading-relaxed">
+                            Explore our showcase of commercial films, 3D brand assets, non-verbal shorts, and creative campaigns.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-3 border-t border-white/10 text-[9px] font-mono text-gray-500 group-hover:text-white uppercase tracking-wider">
+                        VIEW SHOWREEL →
+                    </div>
+                </a>
+
+                <!-- Option 3: Start a Project -->
+                <a href="index.html#sec-inquiry" class="group relative rounded-2xl bg-[#0a0a0a] border border-brand-ruby/60 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-2xl shadow-brand-ruby/20">
+                    <div class="flex items-center justify-between border-b border-brand-ruby/30 pb-3 mb-6">
+                        <span class="text-[10px] font-mono font-bold text-brand-gold tracking-widest uppercase bg-brand-ruby/20 px-2.5 py-1 rounded">03 / INQUIRY</span>
+                        <span class="text-xs text-brand-ruby group-hover:text-white transition-colors">↗</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white mb-2 font-sans group-hover:text-brand-ruby transition-colors">Start a Project</h3>
+                        <p class="text-xs text-gray-300 font-sans leading-relaxed">
+                            Have a brand story or video campaign in mind? Transmit your project details to our studio team.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-3 border-t border-brand-ruby/30 text-[9px] font-mono text-brand-gold group-hover:text-white uppercase tracking-wider font-bold">
+                        TRANSMIT BRIEF →
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Floating Back-To-Top Arrow Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 z-50 h-12 w-12 md:h-14 md:w-14 rounded-full bg-brand-black/90 border border-brand-ruby/60 text-white flex items-center justify-center shadow-[0_10px_30px_rgba(155,17,30,0.5)] opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:bg-brand-ruby hover:border-brand-ruby group" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+
+                                <!-- =========================================================================
+     FOOTER / BOTTOM NAVIGATION (UNIFIED BRAND PALETTE & SOCIAL CHANNELS)
+     ========================================================================= -->
+    <footer class="bg-[#F5F5F7] text-[#111111] border-t border-[#9B111E]/20 pt-12 pb-10 px-6 sm:px-12 relative z-40 mt-0 font-sans shadow-[0_-20px_50px_rgba(0,0,0,0.08)]" id="site-footer">
+        
+        <div class="max-w-[1440px] mx-auto relative z-10">
+            
+            <!-- TOP ROW: BRAND STATEMENT & NAVIGATION GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-[#9B111E]/15">
+                
+                <!-- Left Column: Identity & Commission CTA -->
+                <div class="lg:col-span-5 flex flex-col justify-between items-start">
+                    <div>
+                        <!-- Studio Identity Node -->
+                        <div class="flex items-center gap-3.5 mb-6">
+                            <img src="../assets/images/kausthuba-logo.png" alt="Kausthuba Studio Logo" class="w-10 h-10 rounded-xl object-cover shadow-[0_0_15px_rgba(155,17,30,0.35)] border border-[#9B111E]/20" />
+                            <span class="text-base font-sans font-black tracking-tight uppercase text-[#111111]">KAUSTHUBA | AI CREATIVE STUDIO</span>
+                        </div>
+
+                        <!-- Main Statement -->
+                        <h2 class="text-2xl sm:text-3xl font-sans font-black tracking-tight text-[#111111] leading-[1.25] max-w-md">
+                            We turn brands and vision into cinematic stories through AI motion.
+                        </h2>
+                    </div>
+
+                    <!-- Direct Commission CTA Link -->
+                    <a href="../index.html#sec-inquiry" class="inline-flex items-center gap-2 mt-8 text-[11px] font-mono font-bold text-[#9B111E] uppercase tracking-widest group border-b-2 border-[#9B111E] pb-1 hover:text-[#111111] hover:border-[#111111] transition-colors">
+                        <span>START A PROJECT COMMISSION</span>
+                        <span class="group-hover:translate-x-1 transition-transform">↘</span>
+                    </a>
+                </div>
+
+                <!-- Right Navigation Columns -->
+                <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 pt-2">
+                    
+                    <!-- Col 1: Studio Navigation -->
+                    <div>
+                        <span class="block text-[9px] font-mono text-[#9B111E] font-bold tracking-widest uppercase mb-4">// NAVIGATION</span>
+                        <ul class="space-y-3 text-xs font-mono text-gray-700">
+                            <li><a href="../index.html#hero" class="hover:text-[#9B111E] transition-colors">Home</a></li>
+                            <li><a href="../index.html#about" class="hover:text-[#9B111E] transition-colors">Studio Overview</a></li>
+                            <li><a href="../index.html#stack-container" class="hover:text-[#9B111E] transition-colors">The Kausthuba Edge</a></li>
+                            <li><a href="../index.html#s09a-wall-of-works" class="hover:text-[#9B111E] transition-colors">Our Work</a></li>
+                            <li><a href="../index.html#sec-testimonials" class="hover:text-[#9B111E] transition-colors">Client Reviews</a></li>
+                            <li><a href="../index.html#sec-inquiry" class="hover:text-[#9B111E] transition-colors">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 2: Production Process -->
+                    <div>
+                        <span class="block text-[9px] font-mono text-[#9B111E] font-bold tracking-widest uppercase mb-4">// PROCESS</span>
+                        <ul class="space-y-3 text-xs font-mono text-gray-700">
+                            <li><a href="../index.html#commercial-standard" class="hover:text-[#9B111E] transition-colors">120s Commercial Arc</a></li>
+                            <li><a href="../index.html#pipeline-diamond-section" class="hover:text-[#9B111E] transition-colors">Production Pipeline</a></li>
+                            <li><a href="../index.html#s06-sprint-section" class="hover:text-[#9B111E] transition-colors">Creative Design Sprint</a></li>
+                            <li><a href="../index.html#working-process-section" class="hover:text-[#9B111E] transition-colors">Production Schedule</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Direct Connect (UPDATED SOCIAL LINKS) -->
+                    <div class="col-span-2 sm:col-span-1">
+                        <span class="block text-[9px] font-mono text-[#9B111E] font-bold tracking-widest uppercase mb-4">// CONNECT</span>
+                        <ul class="space-y-3 text-xs font-mono text-gray-700">
+                            <li>
+                                <a href="https://www.instagram.com/kausthuba.studio/" target="_blank" rel="noopener noreferrer" class="hover:text-[#9B111E] transition-colors inline-flex items-center gap-1">
+                                    Instagram ↗
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@kausthuba.studio" target="_blank" rel="noopener noreferrer" class="hover:text-[#9B111E] transition-colors inline-flex items-center gap-1">
+                                    YouTube ↗
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/kausthuba-studio/home/" target="_blank" rel="noopener noreferrer" class="hover:text-[#9B111E] transition-colors inline-flex items-center gap-1">
+                                    LinkedIn ↗
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/people/Kausthuba-AI-Creative-Studio/61595798758241/" target="_blank" rel="noopener noreferrer" class="hover:text-[#9B111E] transition-colors inline-flex items-center gap-1">
+                                    Facebook ↗
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:kausthuba.studio@gmail.com" class="hover:text-[#9B111E] transition-colors inline-flex items-center gap-1">
+                                    Direct Email ↗
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: CONTACT, LOCATION & COPYRIGHT -->
+            <div class="pt-8 pb-16 md:pb-0 flex flex-col md:flex-row items-center md:justify-between text-center md:text-left gap-4 text-[10px] font-mono text-gray-500">
+                
+                <div>
+                    Contact us: <a href="mailto:kausthuba.studio@gmail.com" class="font-bold text-[#111111] hover:text-[#9B111E] transition-colors">kausthuba.studio@gmail.com</a>
+                </div>
+
+                <div>
+                    Find us: <strong class="text-[#111111]">Rajahmundry, Andhra Pradesh, India</strong> (17.000° N, 81.780° E • IST UTC +5:30)
+                </div>
+
+                <div>
+                    © 2026 <strong class="text-[#111111]">Kausthuba | AI Creative Studio</strong>. All rights reserved. • <a href="privacy-policy.html" class="hover:text-[#9B111E] transition-colors">Privacy Policy</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- =========================================================================
+     JAVASCRIPT LOGIC (LENIS SMOOTH SCROLL, GSAP, THREE.JS 3D GEM)
+     ========================================================================= -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. Lenis Smooth Scroll Setup
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true,
+                smoothTouch: false,
+                smoothWheel: true,
+            });
+            window.lenis = lenis;
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // Register GSAP ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+            gsap.ticker.lagSmoothing(0, 0);
+
+            // 2. Navbar hide/reveal on scroll
+            ScrollTrigger.create({
+                trigger: "#hero-404",
+                start: "top top",
+                end: "bottom 10%",
+                onLeave: () => {
+                    gsap.to("#navbar", { y: -100, opacity: 0, duration: 0.4, ease: "power3.inOut" });
+                },
+                onEnterBack: () => {
+                    gsap.to("#navbar", { y: 0, opacity: 1, duration: 0.4, ease: "power3.inOut" });
+                }
+            });
+
+            // 3. Marquee scroll animation
+            const marqueeEl = document.querySelector("#marquee");
+            if (marqueeEl) {
+                gsap.to("#marquee", {
+                    xPercent: -35,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: "#hero-404",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: 1.2
+                    }
+                });
+            }
+
+            // 4. Back To Top Button
+            const backToTopBtn = document.getElementById("back-to-top");
+            if (backToTopBtn) {
+                lenis.on('scroll', (e) => {
+                    if (e.scroll > 300) {
+                        backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+                        backToTopBtn.classList.add("opacity-100", "pointer-events-auto");
+                    } else {
+                        backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+                        backToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
+                    }
+                });
+
+                backToTopBtn.addEventListener("click", () => {
+                    lenis.scrollTo(0, { duration: 1.2 });
+                });
+            }
+        });
+
+        // 5. Standalone 3D Ruby Gem Renderer in Canvas
+        function initRubyCanvas() {
+            const canvas = document.getElementById('ruby-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            try {
+                const scene = new THREE.Scene();
+                
+                const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+                camera.position.set(0, -0.05, 3.8);
+
+                const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+                renderer.setSize(200, 220);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+                // 57-Facet Brilliant Diamond Geometry
+                function createBrilliantGem() {
+                    const geometry = new THREE.BufferGeometry();
+                    const positions = [];
+                    const N = 8;
+
+                    const yTable = 0.38,   rTable = 0.52;
+                    const yStar = 0.26,    rStar = 0.72;
+                    const yBezel = 0.14,   rBezel = 0.95;
+                    const yGirdleUpper = 0.02, rGirdle = 1.05;
+                    const yGirdleLower = -0.04;
+                    const yCulet = -0.95;
+
+                    function addTriangle(p1, p2, p3) {
+                        positions.push(p1.x, p1.y, p1.z);
+                        positions.push(p2.x, p2.y, p2.z);
+                        positions.push(p3.x, p3.y, p3.z);
+                    }
+
+                    const tableCenter = new THREE.Vector3(0, yTable, 0);
+                    const culetPoint  = new THREE.Vector3(0, yCulet, 0);
+
+                    const tableVerts = [], starVerts = [], bezelVerts = [];
+                    const girdleUpperVerts = [], girdleLowerVerts = [];
+
+                    for (let i = 0; i < N; i++) {
+                        const aMain = (i / N) * Math.PI * 2;
+                        const aHalf = ((i + 0.5) / N) * Math.PI * 2;
+
+                        tableVerts.push(new THREE.Vector3(Math.cos(aMain) * rTable, yTable, Math.sin(aMain) * rTable));
+                        starVerts.push(new THREE.Vector3(Math.cos(aHalf) * rStar, yStar, Math.sin(aHalf) * rStar));
+                        bezelVerts.push(new THREE.Vector3(Math.cos(aMain) * rBezel, yBezel, Math.sin(aMain) * rBezel));
+
+                        girdleUpperVerts.push(new THREE.Vector3(Math.cos(aMain) * rGirdle, yGirdleUpper, Math.sin(aMain) * rGirdle));
+                        girdleUpperVerts.push(new THREE.Vector3(Math.cos(aHalf) * rGirdle, yGirdleUpper, Math.sin(aHalf) * rGirdle));
+
+                        girdleLowerVerts.push(new THREE.Vector3(Math.cos(aMain) * rGirdle, yGirdleLower, Math.sin(aMain) * rGirdle));
+                        girdleLowerVerts.push(new THREE.Vector3(Math.cos(aHalf) * rGirdle, yGirdleLower, Math.sin(aHalf) * rGirdle));
+                    }
+
+                    // Top Table & Crown
+                    for (let i = 0; i < N; i++) addTriangle(tableCenter, tableVerts[(i + 1) % N], tableVerts[i]);
+                    for (let i = 0; i < N; i++) addTriangle(tableVerts[i], tableVerts[(i + 1) % N], starVerts[i]);
+                    for (let i = 0; i < N; i++) {
+                        const prevStar = (i + N - 1) % N;
+                        addTriangle(tableVerts[i], starVerts[i], bezelVerts[i]);
+                        addTriangle(tableVerts[i], bezelVerts[i], starVerts[prevStar]);
+                    }
+                    for (let i = 0; i < N; i++) {
+                        const next = (i + 1) % N;
+                        const gIdx = i * 2;
+                        addTriangle(starVerts[i], girdleUpperVerts[gIdx + 1], bezelVerts[i]);
+                        addTriangle(starVerts[i], bezelVerts[next], girdleUpperVerts[gIdx + 1]);
+                        addTriangle(bezelVerts[i], girdleUpperVerts[gIdx + 1], girdleUpperVerts[gIdx]);
+                        addTriangle(bezelVerts[next], girdleUpperVerts[(gIdx + 2) % (N * 2)], girdleUpperVerts[gIdx + 1]);
+                    }
+                    // Bottom Pavilion Cone
+                    for (let i = 0; i < N * 2; i++) {
+                        addTriangle(girdleLowerVerts[i], girdleLowerVerts[(i + 1) % (N * 2)], culetPoint);
+                    }
+                    // Girdle Rim
+                    for (let i = 0; i < N * 2; i++) {
+                        const next = (i + 1) % (N * 2);
+                        addTriangle(girdleUpperVerts[i], girdleUpperVerts[next], girdleLowerVerts[i]);
+                        addTriangle(girdleUpperVerts[next], girdleLowerVerts[next], girdleLowerVerts[i]);
+                    }
+
+                    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+                    geometry.computeVertexNormals();
+                    return geometry;
+                }
+
+                const geometry = createBrilliantGem();
+
+                // Dark Crimson Ruby Material
+                const material = new THREE.MeshPhongMaterial({
+                    color: 0x8A0012,
+                    emissive: 0x220004,
+                    specular: 0xEE9999,
+                    shininess: 80,
+                    flatShading: true
+                });
+
+                const ruby = new THREE.Mesh(geometry, material);
+                ruby.rotation.x = 0.22;
+                ruby.position.y = 0.08;
+                scene.add(ruby);
+
+                // Lighting Architecture
+                const ambientLight = new THREE.AmbientLight(0x380006, 1.6);
+
+                const keyRedLight = new THREE.DirectionalLight(0xB30018, 1.4);
+                keyRedLight.position.set(2, 4, 3);
+
+                const fillSpecular = new THREE.DirectionalLight(0xFFCCCC, 0.7);
+                fillSpecular.position.set(-2, 3, 2);
+
+                scene.add(ambientLight, keyRedLight, fillSpecular);
+
+                // Smooth Rotation
+                function animate() {
+                    requestAnimationFrame(animate);
+                    ruby.rotation.y += 0.012;
+                    renderer.render(scene, camera);
+                }
+                animate();
+            } catch (e) {
+                console.warn("3D Ruby render skipped:", e);
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initRubyCanvas);
+        } else {
+            initRubyCanvas();
+        }
+    </script>
+</body>
+</html>
