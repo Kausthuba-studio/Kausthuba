@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -29,6 +29,11 @@ app.use(express.static(__dirname));
 app.get('/styles.css', (req, res) => res.sendFile(path.join(__dirname, 'css', 'styles.css')));
 app.get('/site-renderer.js', (req, res) => res.sendFile(path.join(__dirname, 'js', 'site-renderer.js')));
 app.get('/main.js', (req, res) => res.sendFile(path.join(__dirname, 'js', 'main.js')));
+
+// --- ROOT ROUTE FIX ---
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'index.html'));
+});
 
 // Seamless Clean Page Routing (/about.html -> pages/about.html, etc.)
 app.get(['/pages/index.html', '/pages/index', '/pages/'], (req, res) => res.redirect('/'));
@@ -298,6 +303,12 @@ app.post('/api/send-inquiry', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Backend server running locally at http://localhost:${PORT}`);
-});
+// Start local server if run directly
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Backend server running locally at http://localhost:${PORT}`);
+    });
+}
+
+// Export module for Vercel Serverless Function deployment
+module.exports = app;
