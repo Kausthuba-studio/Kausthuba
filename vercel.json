@@ -1,17 +1,56 @@
+
 {
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/pages/index.html",
+      "destination": "/",
+      "permanent": false
+    }
+  ],
   "rewrites": [
-    { "source": "/about", "destination": "/pages/about" },
-    { "source": "/contact", "destination": "/pages/contact" },
-    { "source": "/works", "destination": "/pages/works" },
-    { "source": "/testimonials", "destination": "/pages/testimonials" },
-    { "source": "/privacy-policy", "destination": "/pages/privacy-policy" },
-    { "source": "/404", "destination": "/pages/404" },
-    { "source": "/styles.css", "destination": "/css/styles.css" },
-    { "source": "/site-renderer.js", "destination": "/js/site-renderer.js" },
-    { "source": "/main.js", "destination": "/js/main.js" }
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/pages/about"
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/contact"
+    },
+    {
+      "source": "/works",
+      "destination": "/pages/works"
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/pages/testimonials"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/pages/privacy-policy"
+    },
+    {
+      "source": "/404",
+      "destination": "/pages/404"
+    },
+    {
+      "source": "/styles.css",
+      "destination": "/css/styles.css"
+    },
+    {
+      "source": "/site-renderer.js",
+      "destination": "/js/site-renderer.js"
+    },
+    {
+      "source": "/main.js",
+      "destination": "/js/main.js"
+    }
   ],
   "headers": [
     {
