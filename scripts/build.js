@@ -46,26 +46,17 @@ if (!html.includes('config/site-config.js') || !html.includes('js/site-renderer.
 
 // 3. Validate pages directory
 const pagesDir = path.join(rootDir, 'pages');
-const expectedPages = ['about.html', 'contact.html', 'works.html', 'testimonials.html', 'privacy-policy.html', '404.html'];
+const expectedPages = ['about.html', 'contact.html', 'works.html', 'testimonials.html', 'privacy-policy.html'];
 const existingPages = fs.existsSync(pagesDir) ? fs.readdirSync(pagesDir) : [];
 const allPagesPresent = expectedPages.every(p => existingPages.includes(p));
 if (allPagesPresent) {
     console.log(`✓ Modular Pages: ${existingPages.length} organized subpages validated in pages/`);
 }
 
-// 4. Ensure root 404.html is synced from pages/404.html for static host discovery (Vercel / CDN)
-const source404 = path.join(pagesDir, '404.html');
-const dest404 = path.join(rootDir, '404.html');
-if (fs.existsSync(source404)) {
-    let content404 = fs.readFileSync(source404, 'utf8');
-    // Ensure root-relative asset and navigation links for universal depth compatibility
-    content404 = content404
-        .replace(/href="\.\.\/css\//g, 'href="/css/')
-        .replace(/src="\.\.\/js\//g, 'src="/js/')
-        .replace(/src="\.\.\/assets\//g, 'src="/assets/')
-        .replace(/href="\.\.\/index\.html/g, 'href="/index.html');
-    fs.writeFileSync(dest404, content404, 'utf8');
-    console.log('✓ 404 Error Page: Synced pages/404.html -> root 404.html with root-relative paths');
+// 4. Validate root 404.html exists
+const root404Path = path.join(rootDir, '404.html');
+if (fs.existsSync(root404Path)) {
+    console.log('✓ 404 Error Page: Validated at project root for direct host routing');
 }
 
 console.log('----------------------------------------------------');

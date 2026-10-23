@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "cleanUrls": true,
@@ -7,46 +6,6 @@
     {
       "source": "/pages/index.html",
       "destination": "/",
-      "permanent": false
-    },
-    {
-      "source": "/pages/about.html",
-      "destination": "/about",
-      "permanent": false
-    },
-    {
-      "source": "/pages/works.html",
-      "destination": "/works",
-      "permanent": false
-    },
-    {
-      "source": "/pages/contact.html",
-      "destination": "/contact",
-      "permanent": false
-    },
-    {
-      "source": "/pages/testimonials.html",
-      "destination": "/testimonials",
-      "permanent": false
-    },
-    {
-      "source": "/pages/privacy-policy.html",
-      "destination": "/privacy-policy",
-      "permanent": false
-    },
-    {
-      "source": "/pages/404.html",
-      "destination": "/404",
-      "permanent": false
-    },
-    {
-      "source": "/pages/404",
-      "destination": "/404",
-      "permanent": false
-    },
-    {
-      "source": "/((?!api/|assets/|css/|js/|config/|about(?=$|/|\\.html)|works(?=$|/|\\.html)|contact(?=$|/|\\.html)|testimonials(?=$|/|\\.html)|privacy-policy(?=$|/|\\.html)|404(?=$|/|\\.html)|index(?=$|/|\\.html)|styles\\.css|site-renderer\\.js|main\\.js|favicon|robots\\.txt|sitemap\\.xml|$).+)",
-      "destination": "/404",
       "permanent": false
     }
   ],
@@ -57,23 +16,23 @@
     },
     {
       "source": "/about",
-      "destination": "/pages/about.html"
+      "destination": "/pages/about"
     },
     {
       "source": "/contact",
-      "destination": "/pages/contact.html"
+      "destination": "/pages/contact"
     },
     {
       "source": "/works",
-      "destination": "/pages/works.html"
+      "destination": "/pages/works"
     },
     {
       "source": "/testimonials",
-      "destination": "/pages/testimonials.html"
+      "destination": "/pages/testimonials"
     },
     {
       "source": "/privacy-policy",
-      "destination": "/pages/privacy-policy.html"
+      "destination": "/pages/privacy-policy"
     },
     {
       "source": "/404",
@@ -90,10 +49,6 @@
     {
       "source": "/main.js",
       "destination": "/js/main.js"
-    },
-    {
-      "source": "/((?!api/|assets/|css/|js/|config/).*)",
-      "destination": "/404.html"
     }
   ],
   "headers": [

@@ -1066,20 +1066,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Dynamically scale arc radii for any aspect ratio and screen width
             const targetRx = isMobile 
-                ? Math.max(160, stageWidth * 0.46) 
+                ? Math.max(165, stageWidth * 0.44) 
                 : (isTablet ? Math.min(stageWidth * 0.44, 460) : Math.min(stageWidth * 0.4, 1100));
 
             const targetRy = isMobile 
-                ? Math.max(260, stageHeight * 0.42) 
+                ? Math.max(230, stageHeight * 0.32) 
                 : Math.min(stageHeight * 0.65, 600);
 
             const rx = targetRx * expansionProgress;
             const ry = targetRy * expansionProgress;
             
             // Measure actual card half-width for exact centering
-            const cardHalfW = cards[0] && cards[0].offsetWidth > 0 ? cards[0].offsetWidth / 2 : (isMobile ? 32 : 60);
+            const cardHalfW = cards[0] && cards[0].offsetWidth > 0 ? cards[0].offsetWidth / 2 : (isMobile ? 36 : 60);
             const centerX = stageWidth / 2 - cardHalfW;
-            const centerY = stageHeight / 2 + (isMobile ? 120 : (isTablet ? 170 : 210));
+            const centerY = stageHeight / 2 + (isMobile ? -45 : (isTablet ? 170 : 210));
 
             cards.forEach((card, index) => {
                 const theta = (angleOffset + (index / totalImages) * Math.PI * 2) % (Math.PI * 2);
@@ -1098,7 +1098,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     card.style.transform = `rotate(${tangentAngle}deg) scale(${depthScale})`;
                     card.style.opacity = Math.min(1, expansionProgress * 2.0);
-                    card.style.zIndex = Math.floor(depthScale * 25);
+                    
+                    if (isMobile) {
+                        // Upper crowning cards float in 3D above the glass form card header (z-35 > z-30)
+                        card.style.zIndex = Math.sin(theta) > 0.35 ? 35 : 20;
+                    } else {
+                        card.style.zIndex = Math.floor(depthScale * 25);
+                    }
                 } else {
                     card.style.display = "none";
                 }

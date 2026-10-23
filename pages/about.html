@@ -31,25 +31,24 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom Desktop Scrollbar */
-        @media (min-width: 769px) {
+        /* Custom Desktop Scrollbar (Neutral, Sleek, No Red Line) */
+        @media (min-width: 1025px) and (pointer: fine) {
             ::-webkit-scrollbar {
-                width: 10px;
+                width: 8px;
             }
             ::-webkit-scrollbar-track {
-                background: #050505;
+                background: #0a0a0a;
             }
             ::-webkit-scrollbar-thumb {
-                background-color: #9B111E;
+                background-color: rgba(255, 255, 255, 0.2);
                 border-radius: 9999px;
-                border: 2px solid #050505;
             }
             ::-webkit-scrollbar-thumb:hover {
-                background-color: #D4AF37;
+                background-color: rgba(255, 255, 255, 0.35);
             }
         }
-        /* Mobile Scrollbar Reset - Eliminates right-side red bar on mobile */
-        @media (max-width: 768px) {
+        /* Mobile & Touch Viewports: Completely Hidden */
+        @media (max-width: 1024px), (pointer: coarse) {
             ::-webkit-scrollbar {
                 display: none !important;
                 width: 0px !important;
@@ -155,7 +154,7 @@
 </head>
 <body class="antialiased bg-brand-white text-brand-black overflow-x-hidden selection:bg-brand-ruby selection:text-white">
 
-                                <!-- =========================================================================
+                                    <!-- =========================================================================
      HEADER / NAVBAR (UNIFIED TYPOGRAPHY & TEXT-HOVER STYLE)
      ========================================================================= -->
     <header class="fixed md:absolute top-0 left-0 w-full z-50 px-4 md:px-12 py-3 md:py-8 bg-white/80 md:bg-transparent backdrop-blur-xl md:backdrop-blur-none border-b border-black/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.03)] transition-all duration-500" id="navbar">
@@ -347,6 +346,8 @@
         </div>
 
     </div>
+
+    
 
     
 
@@ -601,7 +602,7 @@
     </button>
 
 
-                                <!-- =========================================================================
+                                    <!-- =========================================================================
      FOOTER / BOTTOM NAVIGATION (UNIFIED BRAND PALETTE & SOCIAL CHANNELS)
      ========================================================================= -->
     <footer class="bg-[#F5F5F7] text-[#111111] border-t border-[#9B111E]/20 pt-12 pb-10 px-6 sm:px-12 relative z-40 mt-0 font-sans shadow-[0_-20px_50px_rgba(0,0,0,0.08)]" id="site-footer">
@@ -627,7 +628,7 @@
                     </div>
 
                     <!-- Direct Commission CTA Link -->
-                    <a href="../index.html#sec-inquiry" class="inline-flex items-center gap-2 mt-8 text-[11px] font-mono font-bold text-[#9B111E] uppercase tracking-widest group border-b-2 border-[#9B111E] pb-1 hover:text-[#111111] hover:border-[#111111] transition-colors">
+                    <a href="contact.html" class="inline-flex items-center gap-2 mt-8 text-[11px] font-mono font-bold text-[#9B111E] uppercase tracking-widest group border-b-2 border-[#9B111E] pb-1 hover:text-[#111111] hover:border-[#111111] transition-colors">
                         <span>START A PROJECT COMMISSION</span>
                         <span class="group-hover:translate-x-1 transition-transform">↘</span>
                     </a>
@@ -641,11 +642,11 @@
                         <span class="block text-[9px] font-mono text-[#9B111E] font-bold tracking-widest uppercase mb-4">// NAVIGATION</span>
                         <ul class="space-y-3 text-xs font-mono text-gray-700">
                             <li><a href="../index.html#hero" class="hover:text-[#9B111E] transition-colors">Home</a></li>
-                            <li><a href="../index.html#about" class="hover:text-[#9B111E] transition-colors">Studio Overview</a></li>
+                            <li><a href="about.html" class="hover:text-[#9B111E] transition-colors">Studio Overview</a></li>
                             <li><a href="../index.html#stack-container" class="hover:text-[#9B111E] transition-colors">The Kausthuba Edge</a></li>
-                            <li><a href="../index.html#s09a-wall-of-works" class="hover:text-[#9B111E] transition-colors">Our Work</a></li>
-                            <li><a href="../index.html#sec-testimonials" class="hover:text-[#9B111E] transition-colors">Client Reviews</a></li>
-                            <li><a href="../index.html#sec-inquiry" class="hover:text-[#9B111E] transition-colors">Contact Us</a></li>
+                            <li><a href="works.html" class="hover:text-[#9B111E] transition-colors">Our Work</a></li>
+                            <li><a href="testimonials.html" class="hover:text-[#9B111E] transition-colors">Client Reviews</a></li>
+                            <li><a href="contact.html" class="hover:text-[#9B111E] transition-colors">Contact Us</a></li>
                         </ul>
                     </div>
 

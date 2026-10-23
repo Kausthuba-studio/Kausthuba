@@ -2048,7 +2048,7 @@
                     </div>
 
                     <!-- Card 03: "WE'RE JUST GETTING STARTED" -->
-                    <div class="tm-glass-card w-[290px] sm:w-[340px] md:w-[380px] h-[360px] md:h-[370px] rounded-2xl overflow-hidden border border-[#9B111E] shadow-2xl shrink-0 relative group flex flex-col justify-between p-5 sm:p-6">
+                    <div class="tm-glass-card w-[290px] sm:w-[340px] md:w-[380px] h-[360px] md:h-[370px] rounded-2xl overflow-hidden border border-[#9B111E] shadow-2xl shrink-0 relative group flex flex-col justify-between p-5 sm:p-6 cursor-pointer" onclick="window.location.href='pages/about.html'">
                         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
                             <source src="./assets/videos/work-6.mp4" type="video/mp4" />
                         </video>
@@ -2070,7 +2070,7 @@
                         </div>
 
                         <div class="relative z-20 border-t border-white/20 pt-3 flex justify-between items-center text-[10px] font-mono">
-                            <a href="#contact" class="w-full py-2 bg-[#9B111E] hover:bg-[#7a0d17] text-white font-mono text-[10px] font-bold uppercase tracking-widest rounded-lg text-center transition-colors shadow-lg">
+                            <a href="pages/about.html" class="w-full py-2 bg-[#9B111E] hover:bg-[#7a0d17] text-white font-mono text-[10px] font-bold uppercase tracking-widest rounded-lg text-center transition-colors shadow-lg">
                                 [ CLAIM THE NEXT SLOT → ]
                             </a>
                         </div>
@@ -2344,10 +2344,10 @@
                             If you have questions or need more details, feel free to reach out.
                         </p>
                         <div class="pt-1.5 sm:pt-2 flex gap-2">
-                            <a href="#sec-inquiry" class="flex-1 py-2 sm:py-2.5 bg-[#050505] hover:bg-[#9B111E] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-widest rounded-full transition-colors border border-white/20 flex items-center justify-center">
+                            <a href="pages/contact.html" class="flex-1 py-2 sm:py-2.5 bg-[#050505] hover:bg-[#9B111E] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-widest rounded-full transition-colors border border-white/20 flex items-center justify-center">
                                 LET'S TALK TODAY
                             </a>
-                            <a href="#sec-inquiry" class="w-8 h-8 sm:w-10 sm:h-10 bg-[#050505] hover:bg-[#9B111E] text-white font-mono text-xs sm:text-sm font-bold rounded-full transition-colors border border-white/20 flex items-center justify-center shrink-0">
+                            <a href="pages/contact.html" class="w-8 h-8 sm:w-10 sm:h-10 bg-[#050505] hover:bg-[#9B111E] text-white font-mono text-xs sm:text-sm font-bold rounded-full transition-colors border border-white/20 flex items-center justify-center shrink-0">
                                 ↗
                             </a>
                         </div>
@@ -2381,7 +2381,7 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#9B111E]/18 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
         <!-- Pinned Viewport Stage Container -->
-        <div class="max-w-[1600px] mx-auto w-full px-4 sm:px-8 relative z-10 my-auto h-[780px] flex items-center justify-center" id="inquiry-stage">
+        <div class="max-w-[1600px] mx-auto w-full px-4 sm:px-8 relative z-10 my-auto min-h-[840px] sm:min-h-0 sm:h-[780px] flex items-center justify-center" id="inquiry-stage">
 
             <!-- CONTINUOUS SEMI-CIRCULAR ARCH (25 Image Cards) -->
             <div class="absolute inset-0 pointer-events-none select-none z-10 flex items-center justify-center" id="orbital-cards-wrapper">
@@ -2410,6 +2410,24 @@
                         LET'S BUILD YOUR <br/>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-ruby to-[#D12B38]">STORY TOGETHER</span>
                     </h2>
+
+                    <!-- Mobile Portfolio Highlight Strip (Highlights Portfolio in Mobile View) -->
+                    <div class="sm:hidden mt-3.5 pt-2 border-t border-white/10 flex flex-col items-center gap-1.5">
+                        <div class="flex items-center justify-center -space-x-2">
+                            <img src="./assets/images/work/work-1.jpg" alt="Portfolio 1" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <img src="./assets/images/work/work-3.jpg" alt="Portfolio 2" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <img src="./assets/images/work/work-7.jpg" alt="Portfolio 3" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <img src="./assets/images/work/work-12.jpg" alt="Portfolio 4" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <div class="w-6 h-6 rounded-full bg-brand-ruby/40 border border-brand-ruby flex items-center justify-center text-[7.5px] font-mono font-bold text-white shadow-[0_0_8px_rgba(155,17,30,0.6)]">
+                                +25
+                            </div>
+                        </div>
+                        <a href="pages/works.html" class="inline-flex items-center gap-1.5 text-[8.5px] font-mono text-gray-300 hover:text-white transition-colors bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-ruby animate-pulse"></span>
+                            <span class="text-white font-semibold">25+ CLIENT SHOWREELS</span>
+                            <span class="text-brand-ruby font-bold">VIEW ARCHIVE ↗</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Form Body -->
@@ -2754,7 +2772,7 @@
                     </div>
 
                     <!-- Direct Commission CTA Link -->
-                    <a href="#sec-inquiry" class="inline-flex items-center gap-2 mt-8 text-[11px] font-mono font-bold text-[#9B111E] uppercase tracking-widest group border-b-2 border-[#9B111E] pb-1 hover:text-[#111111] hover:border-[#111111] transition-colors">
+                    <a href="pages/contact.html" class="inline-flex items-center gap-2 mt-8 text-[11px] font-mono font-bold text-[#9B111E] uppercase tracking-widest group border-b-2 border-[#9B111E] pb-1 hover:text-[#111111] hover:border-[#111111] transition-colors">
                         <span>START A PROJECT COMMISSION</span>
                         <span class="group-hover:translate-x-1 transition-transform">↘</span>
                     </a>
@@ -2768,11 +2786,11 @@
                         <span class="block text-[9px] font-mono text-[#9B111E] font-bold tracking-widest uppercase mb-4">// NAVIGATION</span>
                         <ul class="space-y-3 text-xs font-mono text-gray-700">
                             <li><a href="#hero" class="hover:text-[#9B111E] transition-colors">Home</a></li>
-                            <li><a href="#about" class="hover:text-[#9B111E] transition-colors">Studio Overview</a></li>
+                            <li><a href="pages/about.html" class="hover:text-[#9B111E] transition-colors">Studio Overview</a></li>
                             <li><a href="#stack-container" class="hover:text-[#9B111E] transition-colors">The Kausthuba Edge</a></li>
-                            <li><a href="#s09a-wall-of-works" class="hover:text-[#9B111E] transition-colors">Our Work</a></li>
-                            <li><a href="#sec-testimonials" class="hover:text-[#9B111E] transition-colors">Client Reviews</a></li>
-                            <li><a href="#sec-inquiry" class="hover:text-[#9B111E] transition-colors">Contact Us</a></li>
+                            <li><a href="pages/works.html" class="hover:text-[#9B111E] transition-colors">Our Work</a></li>
+                            <li><a href="pages/testimonials.html" class="hover:text-[#9B111E] transition-colors">Client Reviews</a></li>
+                            <li><a href="pages/contact.html" class="hover:text-[#9B111E] transition-colors">Contact Us</a></li>
                         </ul>
                     </div>
 

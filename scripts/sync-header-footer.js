@@ -222,7 +222,7 @@ const footerContent = `    <!-- ================================================
                     </div>
 
                     <!-- Direct Commission CTA Link -->
-                    <a href="../index.html#sec-inquiry" class="inline-flex items-center gap-2 mt-8 text-[11px] font-mono font-bold text-[#9B111E] uppercase tracking-widest group border-b-2 border-[#9B111E] pb-1 hover:text-[#111111] hover:border-[#111111] transition-colors">
+                    <a href="contact.html" class="inline-flex items-center gap-2 mt-8 text-[11px] font-mono font-bold text-[#9B111E] uppercase tracking-widest group border-b-2 border-[#9B111E] pb-1 hover:text-[#111111] hover:border-[#111111] transition-colors">
                         <span>START A PROJECT COMMISSION</span>
                         <span class="group-hover:translate-x-1 transition-transform">↘</span>
                     </a>
@@ -236,11 +236,11 @@ const footerContent = `    <!-- ================================================
                         <span class="block text-[9px] font-mono text-[#9B111E] font-bold tracking-widest uppercase mb-4">// NAVIGATION</span>
                         <ul class="space-y-3 text-xs font-mono text-gray-700">
                             <li><a href="../index.html#hero" class="hover:text-[#9B111E] transition-colors">Home</a></li>
-                            <li><a href="../index.html#about" class="hover:text-[#9B111E] transition-colors">Studio Overview</a></li>
+                            <li><a href="about.html" class="hover:text-[#9B111E] transition-colors">Studio Overview</a></li>
                             <li><a href="../index.html#stack-container" class="hover:text-[#9B111E] transition-colors">The Kausthuba Edge</a></li>
-                            <li><a href="../index.html#s09a-wall-of-works" class="hover:text-[#9B111E] transition-colors">Our Work</a></li>
-                            <li><a href="../index.html#sec-testimonials" class="hover:text-[#9B111E] transition-colors">Client Reviews</a></li>
-                            <li><a href="../index.html#sec-inquiry" class="hover:text-[#9B111E] transition-colors">Contact Us</a></li>
+                            <li><a href="works.html" class="hover:text-[#9B111E] transition-colors">Our Work</a></li>
+                            <li><a href="testimonials.html" class="hover:text-[#9B111E] transition-colors">Client Reviews</a></li>
+                            <li><a href="contact.html" class="hover:text-[#9B111E] transition-colors">Contact Us</a></li>
                         </ul>
                     </div>
 
@@ -315,8 +315,7 @@ const targetFiles = [
     'contact.html',
     'works.html',
     'testimonials.html',
-    'privacy-policy.html',
-    '404.html'
+    'privacy-policy.html'
 ];
 
 targetFiles.forEach(fileName => {

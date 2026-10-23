@@ -217,7 +217,11 @@
                 const ctaEl = card.querySelector('a');
                 if (ctaEl) {
                     if (c.ctaText) ctaEl.textContent = c.ctaText;
-                    if (c.ctaHref) ctaEl.setAttribute('href', c.ctaHref);
+                    if (c.ctaHref) {
+                        ctaEl.setAttribute('href', c.ctaHref);
+                        card.style.cursor = 'pointer';
+                        card.onclick = () => { window.location.href = c.ctaHref; };
+                    }
                 }
             }
         });
@@ -269,11 +273,12 @@
                 const descEl = card.querySelector('p');
                 if (descEl && item.desc) descEl.textContent = item.desc;
 
-                const ctaLink = card.querySelector('a');
-                if (ctaLink) {
-                    if (item.ctaText) ctaLink.textContent = item.ctaText;
+                const ctaLinks = card.querySelectorAll('a');
+                ctaLinks.forEach(ctaLink => {
                     if (item.ctaHref) ctaLink.setAttribute('href', item.ctaHref);
-                }
+                });
+                const firstLink = ctaLinks[0];
+                if (firstLink && item.ctaText) firstLink.textContent = item.ctaText;
                 return;
             }
 

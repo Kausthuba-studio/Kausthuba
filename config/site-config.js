@@ -529,7 +529,7 @@ const SITE_CONFIG = {
             title: "THAT'S ALL FOR NOW. <br/><span class=\"text-[#9B111E]\">(UNLESS YOU'RE NEXT.)</span>",
             desc: "We've got plenty of screen time left. Let's make your brand the main event.",
             ctaText: "[ CLAIM THE NEXT SLOT → ]",
-            ctaHref: "#contact"
+            ctaHref: "pages/about.html"
         }
     ],
 
@@ -644,7 +644,7 @@ const SITE_CONFIG = {
             title: "Can't find your answer?",
             desc: "If you have questions or need more details, feel free to reach out.",
             ctaText: "LET'S TALK TODAY",
-            ctaHref: "#contact"
+            ctaHref: "pages/contact.html"
         }
     ],
 
