@@ -53,6 +53,14 @@ if (allPagesPresent) {
     console.log(`✓ Modular Pages: ${existingPages.length} organized subpages validated in pages/`);
 }
 
+// 4. Ensure root 404.html is synced from pages/404.html for static host discovery (Vercel / CDN)
+const source404 = path.join(pagesDir, '404.html');
+const dest404 = path.join(rootDir, '404.html');
+if (fs.existsSync(source404)) {
+    fs.copyFileSync(source404, dest404);
+    console.log('✓ 404 Error Page: Synced pages/404.html -> root 404.html for host discovery');
+}
+
 console.log('----------------------------------------------------');
 console.log('✓ BUILD SUCCESS: All modular components validated & ready.');
 console.log('----------------------------------------------------');

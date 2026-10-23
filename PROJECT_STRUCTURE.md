@@ -77,6 +77,7 @@ Kausthuba/
   - Serves static assets (`/css`, `/js`, `/assets`, `/config`, `/pages`).
   - Rewrites clean subpage routes (e.g., `/about` and `/about.html` → `pages/about.html`).
   - Automatically redirects `/pages/index.html` → `/`.
+  - Automatically redirects all non-existent routes/pages → `/404` (serving `pages/404.html` with status 404).
   - Exposes the local `POST /api/send-inquiry` endpoint utilizing **Nodemailer** to send two simultaneous emails:
     1. An alert to the studio owner (`kausthuba.studio@gmail.com`).
     2. A branded confirmation receipt to the client.
@@ -87,6 +88,8 @@ Kausthuba/
   - Enables `cleanUrls: true` for clean browser URLs (`/about` instead of `/pages/about.html`).
   - Maps clean routes directly to HTML files in `pages/`.
   - Enforces HTTP 302 redirect from `/pages/index.html` to root `/`.
+  - Enforces HTTP 302 redirect from `/pages/404` and `/pages/404.html` to `/404`.
+  - Serves root `404.html` with status 404 for unmatched routes with automatic client canonicalization to `/404`.
   - Sets immutable long-term caching headers (`Cache-Control: public, max-age=31536000, immutable`) on static media under `/assets/`.
 
 ### `package.json` & `package-lock.json`

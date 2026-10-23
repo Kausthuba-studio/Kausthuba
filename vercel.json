@@ -8,6 +8,16 @@
       "source": "/pages/index.html",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/pages/404.html",
+      "destination": "/404",
+      "permanent": false
+    },
+    {
+      "source": "/pages/404",
+      "destination": "/404",
+      "permanent": false
     }
   ],
   "rewrites": [

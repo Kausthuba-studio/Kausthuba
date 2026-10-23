@@ -13,6 +13,32 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Backward Compatibility Fallback Aliases
+app.get('/styles.css', (req, res) => res.sendFile(path.join(__dirname, 'css', 'styles.css')));
+app.get('/site-renderer.js', (req, res) => res.sendFile(path.join(__dirname, 'js', 'site-renderer.js')));
+app.get('/main.js', (req, res) => res.sendFile(path.join(__dirname, 'js', 'main.js')));
+
+// --- ROOT ROUTE FIX ---
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Seamless Clean Page Routing (/pages/about.html -> /about, etc.)
+app.get(['/pages/index.html', '/pages/index', '/pages/'], (req, res) => res.redirect('/'));
+
+const subPages = ['about', 'contact', 'works', 'testimonials', 'privacy-policy'];
+subPages.forEach((p) => {
+    app.get([`/pages/${p}.html`, `/pages/${p}`], (req, res) => res.redirect(`/${p}`));
+    app.get(`/${p}.html`, (req, res) => res.sendFile(path.join(__dirname, 'pages', `${p}.html`)));
+    app.get(`/${p}`, (req, res) => res.sendFile(path.join(__dirname, 'pages', `${p}.html`)));
+});
+
+// Dedicated 404 Error Page Routing
+app.get(['/pages/404.html', '/pages/404'], (req, res) => res.redirect('/404'));
+app.get(['/404', '/404.html'], (req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'pages', '404.html'));
+});
+
 // Organized Static Asset Directories
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
@@ -24,25 +50,6 @@ app.use('/pages/js', express.static(path.join(__dirname, 'js')));
 app.use('/pages/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/pages/config', express.static(path.join(__dirname, 'config')));
 app.use(express.static(__dirname));
-
-// Backward Compatibility Fallback Aliases
-app.get('/styles.css', (req, res) => res.sendFile(path.join(__dirname, 'css', 'styles.css')));
-app.get('/site-renderer.js', (req, res) => res.sendFile(path.join(__dirname, 'js', 'site-renderer.js')));
-app.get('/main.js', (req, res) => res.sendFile(path.join(__dirname, 'js', 'main.js')));
-
-// --- ROOT ROUTE FIX ---
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'index.html'));
-});
-
-// Seamless Clean Page Routing (/about.html -> pages/about.html, etc.)
-app.get(['/pages/index.html', '/pages/index', '/pages/'], (req, res) => res.redirect('/'));
-
-const subPages = ['about', 'contact', 'works', 'testimonials', 'privacy-policy', '404'];
-subPages.forEach((p) => {
-    app.get(`/${p}.html`, (req, res) => res.sendFile(path.join(__dirname, 'pages', `${p}.html`)));
-    app.get(`/${p}`, (req, res) => res.sendFile(path.join(__dirname, 'pages', `${p}.html`)));
-});
 
 // Nodemailer Transporter Setup
 const transporter = nodemailer.createTransport({
@@ -301,6 +308,14 @@ app.post('/api/send-inquiry', async (req, res) => {
         console.error('Nodemailer Transmission Error:', error);
         return res.status(500).json({ error: 'Failed to send inquiry emails.' });
     }
+});
+
+// Catch-all 404 handler: Redirect any non-existent page/route to /404 error page
+app.use((req, res) => {
+    if (req.path.startsWith('/api/')) {
+        return res.status(404).json({ error: 'Endpoint not found' });
+    }
+    res.redirect('/404');
 });
 
 // Start local server if run directly

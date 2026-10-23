@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Scene Not Found | KAUSTHUBA AI Creative Studio</title>
     
+    <!-- Automatic Route Canonicalization: Redirect non-existent routes to /404 (only on HTTP/HTTPS) -->
+    <script>
+        if (window.location.protocol.startsWith('http') && window.location.pathname !== '/404' && window.location.pathname !== '/404.html') {
+            window.location.replace('/404');
+        }
+    </script>
+    
     <!-- External Animation & Styling Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -429,13 +436,13 @@
             <!-- Action Buttons Row -->
             <div class="mt-8 md:mt-12 flex flex-wrap justify-center items-center gap-4">
                 <!-- Return Home Button -->
-                <a href="index.html#hero" class="btn-more-about group relative inline-flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border-2 border-brand-black shadow-[0_15px_35px_rgba(0,0,0,0.25)] hover:border-brand-ruby transition-all duration-300 overflow-hidden">
+                <a href="../index.html#hero" class="btn-more-about group relative inline-flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border-2 border-brand-black shadow-[0_15px_35px_rgba(0,0,0,0.25)] hover:border-brand-ruby transition-all duration-300 overflow-hidden">
                     <span class="absolute inset-0 bg-brand-ruby -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
                     <span class="relative z-10 text-white transition-colors duration-300">Return to Home ↗</span>
                 </a>
 
                 <!-- View Our Work Button -->
-                <a href="index.html#s09a-wall-of-works" class="inline-flex items-center gap-2 border border-brand-black px-8 py-4 rounded-full text-xs font-bold tracking-[0.2em] uppercase hover:bg-brand-ruby hover:border-brand-ruby hover:text-white transition-all duration-300 bg-white">
+                <a href="../index.html#s09a-wall-of-works" class="inline-flex items-center gap-2 border border-brand-black px-8 py-4 rounded-full text-xs font-bold tracking-[0.2em] uppercase hover:bg-brand-ruby hover:border-brand-ruby hover:text-white transition-all duration-300 bg-white">
                     Explore Our Work
                 </a>
             </div>
@@ -484,7 +491,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 
                 <!-- Option 1: Commercial Standard -->
-                <a href="index.html#commercial-standard" class="group relative rounded-2xl bg-[#0a0a0a] border border-white/10 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-xl">
+                <a href="../index.html#commercial-standard" class="group relative rounded-2xl bg-[#0a0a0a] border border-white/10 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-xl">
                     <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-6">
                         <span class="text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 px-2.5 py-1 rounded">01 / PROCESS</span>
                         <span class="text-xs text-gray-500 group-hover:text-white transition-colors">↗</span>
@@ -501,7 +508,7 @@
                 </a>
 
                 <!-- Option 2: Our Work -->
-                <a href="index.html#s09a-wall-of-works" class="group relative rounded-2xl bg-[#0a0a0a] border border-white/10 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-xl">
+                <a href="../index.html#s09a-wall-of-works" class="group relative rounded-2xl bg-[#0a0a0a] border border-white/10 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-xl">
                     <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-6">
                         <span class="text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 px-2.5 py-1 rounded">02 / PORTFOLIO</span>
                         <span class="text-xs text-gray-500 group-hover:text-white transition-colors">↗</span>
@@ -518,7 +525,7 @@
                 </a>
 
                 <!-- Option 3: Start a Project -->
-                <a href="index.html#sec-inquiry" class="group relative rounded-2xl bg-[#0a0a0a] border border-brand-ruby/60 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-2xl shadow-brand-ruby/20">
+                <a href="../index.html#sec-inquiry" class="group relative rounded-2xl bg-[#0a0a0a] border border-brand-ruby/60 p-6 md:p-8 hover:border-brand-ruby transition-all duration-300 flex flex-col justify-between shadow-2xl shadow-brand-ruby/20">
                     <div class="flex items-center justify-between border-b border-brand-ruby/30 pb-3 mb-6">
                         <span class="text-[10px] font-mono font-bold text-brand-gold tracking-widest uppercase bg-brand-ruby/20 px-2.5 py-1 rounded">03 / INQUIRY</span>
                         <span class="text-xs text-brand-ruby group-hover:text-white transition-colors">↗</span>
