@@ -2498,44 +2498,48 @@
                     </div>
 
                     <!-- BOX 2: MULTI-SOCIAL NODE -->
-                    <div id="bento-box-2" class="rounded-2xl sm:rounded-3xl border border-[#9B111E]/20 p-2.5 sm:p-3 md:p-4 flex flex-col justify-between relative overflow-hidden bento-light-card mesh-ruby-2 shadow-md group" data-bento-card data-scatter="right-tall">
-                        <svg class="bento-bg-icon w-36 sm:w-48 h-36 sm:h-48 absolute -right-6 -top-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div id="bento-box-2" class="rounded-2xl sm:rounded-3xl border border-[#9B111E]/20 p-3 sm:p-4 md:p-5 flex flex-col justify-between relative overflow-hidden bento-light-card mesh-ruby-2 shadow-md group" data-bento-card data-scatter="right-tall">
+                        <svg class="bento-bg-icon w-36 sm:w-48 h-36 sm:h-48 absolute -right-6 -top-6 pointer-events-none opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/>
                         </svg>
 
-                        <div class="relative z-20 w-full">
+                        <div class="relative z-20 w-full mb-2">
                             <span class="text-[7.5px] sm:text-[8.5px] font-mono text-[#9B111E] font-bold tracking-widest uppercase block mb-0.5">// MULTI-SOCIAL NODE</span>
                             <h4 class="text-[11px] sm:text-xs lg:text-sm font-sans font-black text-gray-900 uppercase tracking-tight">CONNECT & FOLLOW</h4>
                         </div>
 
-                        <!-- 4-Social Grid (Instagram QR + Youtube + LinkedIn + Facebook) -->
-                        <div class="relative z-25 grid grid-cols-2 gap-1.5 sm:gap-2 my-auto">
-                            <a href="https://www.instagram.com/kausthuba.studio/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center bg-white/80 p-1.5 sm:p-2 rounded-xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300">
-                                <img src="assets/images/qr-instagram.png" alt="Instagram QR" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-lg sm:rounded-xl object-cover mb-0.5 sm:mb-1" />
-                                <span class="text-[7px] sm:text-[7.5px] font-mono font-bold text-[#9B111E]">INSTAGRAM</span>
-                                <span class="text-[6px] sm:text-[6.5px] font-mono text-gray-500 truncate max-w-[70px]">@kausthuba</span>
+                        <!-- 4-Social Grid (Expanded QR Codes) -->
+                        <div class="relative z-25 grid grid-cols-2 gap-2 sm:gap-3 my-auto w-full flex-1 items-center justify-center py-2">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/kausthuba.studio/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-white/80 hover:bg-white p-2.5 sm:p-3 rounded-2xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300 h-full">
+                                <img src="assets/images/qr-instagram.png" alt="Instagram QR" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl object-contain mb-1.5" />
+                                <span class="text-[8.5px] sm:text-[9.5px] font-mono font-bold text-[#9B111E] tracking-wider">INSTAGRAM</span>
+                                <span class="text-[7px] sm:text-[8px] font-mono text-gray-500 truncate max-w-[110px]">@kausthuba</span>
                             </a>
 
-                            <a href="https://www.youtube.com/@kausthuba.studio" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-white/80 p-1.5 sm:p-2 rounded-xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300">
-                                <img src="assets/images/qr-youtube.png" alt="Instagram QR" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-lg sm:rounded-xl object-cover mb-0.5 sm:mb-1" />
-                                <span class="text-[7px] sm:text-[7.5px] font-mono font-bold text-[#9B111E]">YOUTUBE</span>
-                                <span class="text-[6px] sm:text-[6.5px] font-mono text-gray-500">SHOWREEL</span>
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/@kausthuba.studio" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-white/80 hover:bg-white p-2.5 sm:p-3 rounded-2xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300 h-full">
+                                <img src="assets/images/qr-youtube.png" alt="YouTube QR" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl object-contain mb-1.5" />
+                                <span class="text-[8.5px] sm:text-[9.5px] font-mono font-bold text-[#9B111E] tracking-wider">YOUTUBE</span>
+                                <span class="text-[7px] sm:text-[8px] font-mono text-gray-500">SHOWREEL</span>
                             </a>
 
-                            <a href="https://www.linkedin.com/company/kausthuba-studio/home/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-white/80 p-1.5 sm:p-2 rounded-xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300">
-                                <img src="assets/images/qr-linkedin.png" alt="LinkedIn QR" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-lg sm:rounded-xl object-cover mb-0.5 sm:mb-1" />
-                                <span class="text-[7px] sm:text-[7.5px] font-mono font-bold text-[#9B111E]">LINKEDIN</span>
-                                <span class="text-[6px] sm:text-[6.5px] font-mono text-gray-500">NETWORK</span>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/company/kausthuba-studio/home/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-white/80 hover:bg-white p-2.5 sm:p-3 rounded-2xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300 h-full">
+                                <img src="assets/images/qr-linkedin.png" alt="LinkedIn QR" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl object-contain mb-1.5" />
+                                <span class="text-[8.5px] sm:text-[9.5px] font-mono font-bold text-[#9B111E] tracking-wider">LINKEDIN</span>
+                                <span class="text-[7px] sm:text-[8px] font-mono text-gray-500">NETWORK</span>
                             </a>
 
-                            <a href="https://www.facebook.com/people/Kausthuba-AI-Creative-Studio/61595798758241/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-white/80 p-1.5 sm:p-2 rounded-xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300">
-                                <img src="assets/images/qr-facebook.png" alt="Facebook QR" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-lg sm:rounded-xl object-cover mb-0.5 sm:mb-1" />
-                                <span class="text-[7px] sm:text-[7.5px] font-mono font-bold text-[#9B111E]">FACEBOOK</span>
-                                <span class="text-[6px] sm:text-[6.5px] font-mono text-gray-500">PAGE</span>
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/people/Kausthuba-AI-Creative-Studio/61595798758241/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-white/80 hover:bg-white p-2.5 sm:p-3 rounded-2xl border border-red-100 shadow-sm hover:scale-105 transition-transform duration-300 h-full">
+                                <img src="assets/images/qr-facebook.png" alt="Facebook QR" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl object-contain mb-1.5" />
+                                <span class="text-[8.5px] sm:text-[9.5px] font-mono font-bold text-[#9B111E] tracking-wider">FACEBOOK</span>
+                                <span class="text-[7px] sm:text-[8px] font-mono text-gray-500">PAGE</span>
                             </a>
                         </div>
 
-                        <div class="relative z-20 w-full pt-1.5 border-t border-red-200/40 text-[7.5px] sm:text-[8px] font-mono text-gray-500 flex justify-between">
+                        <div class="relative z-20 w-full pt-2 mt-auto border-t border-red-200/40 text-[7.5px] sm:text-[8px] font-mono text-gray-500 flex justify-between">
                             <span>INQUIRIES</span>
                             <span class="text-gray-900 font-bold">PORTAL ACTIVE ↗</span>
                         </div>
