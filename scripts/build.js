@@ -57,8 +57,15 @@ if (allPagesPresent) {
 const source404 = path.join(pagesDir, '404.html');
 const dest404 = path.join(rootDir, '404.html');
 if (fs.existsSync(source404)) {
-    fs.copyFileSync(source404, dest404);
-    console.log('✓ 404 Error Page: Synced pages/404.html -> root 404.html for host discovery');
+    let content404 = fs.readFileSync(source404, 'utf8');
+    // Ensure root-relative asset and navigation links for universal depth compatibility
+    content404 = content404
+        .replace(/href="\.\.\/css\//g, 'href="/css/')
+        .replace(/src="\.\.\/js\//g, 'src="/js/')
+        .replace(/src="\.\.\/assets\//g, 'src="/assets/')
+        .replace(/href="\.\.\/index\.html/g, 'href="/index.html');
+    fs.writeFileSync(dest404, content404, 'utf8');
+    console.log('✓ 404 Error Page: Synced pages/404.html -> root 404.html with root-relative paths');
 }
 
 console.log('----------------------------------------------------');

@@ -10,12 +10,42 @@
       "permanent": false
     },
     {
+      "source": "/pages/about.html",
+      "destination": "/about",
+      "permanent": false
+    },
+    {
+      "source": "/pages/works.html",
+      "destination": "/works",
+      "permanent": false
+    },
+    {
+      "source": "/pages/contact.html",
+      "destination": "/contact",
+      "permanent": false
+    },
+    {
+      "source": "/pages/testimonials.html",
+      "destination": "/testimonials",
+      "permanent": false
+    },
+    {
+      "source": "/pages/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": false
+    },
+    {
       "source": "/pages/404.html",
       "destination": "/404",
       "permanent": false
     },
     {
       "source": "/pages/404",
+      "destination": "/404",
+      "permanent": false
+    },
+    {
+      "source": "/((?!api/|assets/|css/|js/|config/|about(?=$|/|\\.html)|works(?=$|/|\\.html)|contact(?=$|/|\\.html)|testimonials(?=$|/|\\.html)|privacy-policy(?=$|/|\\.html)|404(?=$|/|\\.html)|index(?=$|/|\\.html)|styles\\.css|site-renderer\\.js|main\\.js|favicon|robots\\.txt|sitemap\\.xml|$).+)",
       "destination": "/404",
       "permanent": false
     }
@@ -27,27 +57,27 @@
     },
     {
       "source": "/about",
-      "destination": "/pages/about"
+      "destination": "/pages/about.html"
     },
     {
       "source": "/contact",
-      "destination": "/pages/contact"
+      "destination": "/pages/contact.html"
     },
     {
       "source": "/works",
-      "destination": "/pages/works"
+      "destination": "/pages/works.html"
     },
     {
       "source": "/testimonials",
-      "destination": "/pages/testimonials"
+      "destination": "/pages/testimonials.html"
     },
     {
       "source": "/privacy-policy",
-      "destination": "/pages/privacy-policy"
+      "destination": "/pages/privacy-policy.html"
     },
     {
       "source": "/404",
-      "destination": "/pages/404"
+      "destination": "/404.html"
     },
     {
       "source": "/styles.css",
@@ -60,6 +90,10 @@
     {
       "source": "/main.js",
       "destination": "/js/main.js"
+    },
+    {
+      "source": "/((?!api/|assets/|css/|js/|config/).*)",
+      "destination": "/404.html"
     }
   ],
   "headers": [
