@@ -1,7 +1,6 @@
-@"
 node_modules/
 .env
 .env.*
 !.env.example
 .vercel/
-"@ | Set-Content .gitignore
+assets-backup/

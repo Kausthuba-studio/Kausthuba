@@ -18,14 +18,17 @@
         return window.SITE_CONFIG || null;
     }
 
-    // Helper: Safely update video source
-    function setVideoSrc(videoEl, newSrc) {
-        if (!videoEl || !newSrc) return;
+    // Helper: Safely update video source & poster
+    function setVideoSrc(videoEl, newSrc, posterSrc) {
+        if (!videoEl) return;
+        if (posterSrc && videoEl.getAttribute('poster') !== posterSrc) {
+            videoEl.setAttribute('poster', posterSrc);
+        }
+        if (!newSrc) return;
         const source = videoEl.querySelector('source') || videoEl;
         const currentSrc = source.getAttribute('src');
         if (currentSrc !== newSrc) {
             source.setAttribute('src', newSrc);
-            if (videoEl.load) videoEl.load();
         }
     }
 
@@ -36,6 +39,10 @@
             imgEl.setAttribute('src', newSrc);
         }
         if (altText) imgEl.setAttribute('alt', altText);
+        if (!imgEl.hasAttribute('loading') && !imgEl.classList.contains('no-lazy')) {
+            imgEl.setAttribute('loading', 'lazy');
+            imgEl.setAttribute('decoding', 'async');
+        }
     }
 
     // ------------------------------------------------------------------------
@@ -119,7 +126,8 @@
                 if (w.collageVideos && Array.isArray(w.collageVideos)) {
                     const collageVideos = card.querySelectorAll('video');
                     w.collageVideos.forEach((vSrc, vIdx) => {
-                        setVideoSrc(collageVideos[vIdx], vSrc);
+                        const posterSrc = (w.collagePosters && w.collagePosters[vIdx]) ? w.collagePosters[vIdx] : null;
+                        setVideoSrc(collageVideos[vIdx], vSrc, posterSrc);
                     });
                 }
                 const titleEl = card.querySelector('h3');
@@ -138,7 +146,7 @@
 
             // Cards 01-05: Case Studies
             const video = card.querySelector('.s09-card-front video');
-            setVideoSrc(video, w.video);
+            setVideoSrc(video, w.video, w.poster);
 
             const titleEl = card.querySelector('.s09-card-front h3');
             if (titleEl && w.title) titleEl.textContent = w.title;
@@ -206,7 +214,7 @@
             // Card 03: THAT'S ALL FOR NOW (Video Card)
             else if (c.type === 'videoCard' || idx === 2) {
                 const video = card.querySelector('video');
-                setVideoSrc(video, c.video);
+                setVideoSrc(video, c.video, c.poster);
 
                 const titleEl = card.querySelector('h3');
                 if (titleEl && c.title) titleEl.innerHTML = c.title;
@@ -250,7 +258,7 @@
 
             const video = videos[idx];
             if (video && cap.video) {
-                setVideoSrc(video, cap.video);
+                setVideoSrc(video, cap.video, cap.poster);
             }
         });
     }
@@ -298,7 +306,7 @@
         if (!cfg || !cfg.bento) return;
         const heroVideo = document.getElementById('hero-bg-video');
         if (heroVideo && cfg.bento.centerVideo) {
-            setVideoSrc(heroVideo, cfg.bento.centerVideo);
+            setVideoSrc(heroVideo, cfg.bento.centerVideo, cfg.bento.centerVideoPoster);
         }
     }
 

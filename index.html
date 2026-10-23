@@ -29,6 +29,9 @@
             }
         }
     </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/images/kausthuba-logo.webp" type="image/webp" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <!-- Modular Site Configuration & Dynamic Renderer -->
     <script src="config/site-config.js"></script>
@@ -44,7 +47,7 @@
             
             <!-- Brand Logo -->
             <a href="#hero" class="flex items-center gap-3 group">
-                <img src="assets/images/kausthuba-logo.png" alt="Kausthuba Studio Logo" class="h-9 w-9 rounded-full object-cover border border-brand-ruby shadow-md transition-transform duration-300 group-hover:scale-110" />
+                <img src="assets/images/kausthuba-logo.webp" alt="Kausthuba Studio Logo" width="36" height="36" fetchpriority="high" class="h-9 w-9 rounded-full object-cover border border-brand-ruby shadow-md transition-transform duration-300 group-hover:scale-110" />
                 <div class="flex flex-col text-left">
                     <span class="text-xs font-black tracking-[0.25em] uppercase text-brand-black">KAUSTHUBA</span>
                     <span class="text-[9px] font-mono tracking-widest text-brand-ruby uppercase">AI Creative Studio</span>
@@ -139,7 +142,7 @@
         <!-- Top bar with brand and close button (Fixed Header) -->
         <div class="flex items-center justify-between border-b border-white/10 pb-3.5 shrink-0">
             <a href="#hero" class="flex items-center gap-3 mobile-nav-link group">
-                <img src="assets/images/kausthuba-logo.png" alt="Kausthuba Logo" class="w-9 h-9 rounded-full border border-brand-ruby shadow-md" />
+                <img src="assets/images/kausthuba-logo.webp" alt="Kausthuba Logo" width="36" height="36" loading="lazy" decoding="async" class="w-9 h-9 rounded-full border border-brand-ruby shadow-md" />
                 <div class="flex flex-col text-left">
                     <span class="text-xs font-black tracking-[0.25em] uppercase text-white font-mono">KAUSTHUBA</span>
                     <span class="text-[9px] font-mono tracking-widest text-brand-ruby uppercase">AI Creative Studio</span>
@@ -460,7 +463,7 @@
                 <div class="expand-card relative rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#0d0d0d] flex-1 cursor-pointer group shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-[2px] bg-brand-ruby/40 group-hover:bg-brand-ruby transition-colors duration-300"></div>
                     <div class="card-cutout-layer absolute inset-0 z-10 pointer-events-none overflow-hidden flex items-end justify-end pr-1 sm:pr-2 md:pr-6 opacity-20 sm:opacity-40 md:opacity-100">
-                        <img src="./assets/images/cutout-1.png" alt="Stage 01 Disruption Hook Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
+                        <img src="./assets/images/cutout-1.webp" loading="lazy" decoding="async" alt="Stage 01 Disruption Hook Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <div class="card-collapsed-view absolute inset-0 p-3 sm:p-5 flex flex-col justify-between items-center z-20 transition-opacity duration-300 pointer-events-none">
                         <span class="text-[9px] sm:text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 border border-brand-ruby/30 px-1.5 sm:px-2 py-0.5 rounded-md">01</span>
@@ -487,7 +490,7 @@
                 <div class="expand-card relative rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#0d0d0d] flex-1 cursor-pointer group shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-[2px] bg-brand-ruby/40 group-hover:bg-brand-ruby transition-colors duration-300"></div>
                     <div class="card-cutout-layer absolute inset-0 z-10 pointer-events-none overflow-hidden flex items-end justify-end pr-1 sm:pr-2 md:pr-6 opacity-20 sm:opacity-40 md:opacity-100">
-                        <img src="./assets/images/cutout-2.png" alt="Stage 02 Problem Friction Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
+                        <img src="./assets/images/cutout-2.webp" loading="lazy" decoding="async" alt="Stage 02 Problem Friction Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <div class="card-collapsed-view absolute inset-0 p-3 sm:p-5 flex flex-col justify-between items-center z-20 transition-opacity duration-300 pointer-events-none">
                         <span class="text-[9px] sm:text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 border border-brand-ruby/30 px-1.5 sm:px-2 py-0.5 rounded-md">02</span>
@@ -514,7 +517,7 @@
                 <div class="expand-card relative rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#0d0d0d] flex-1 cursor-pointer group shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-[2px] bg-brand-ruby/40 group-hover:bg-brand-ruby transition-colors duration-300"></div>
                     <div class="card-cutout-layer absolute inset-0 z-10 pointer-events-none overflow-hidden flex items-end justify-end pr-1 sm:pr-2 md:pr-6 opacity-20 sm:opacity-40 md:opacity-100">
-                        <img src="./assets/images/cutout-3.png" alt="Stage 03 Solution Discovery Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
+                        <img src="./assets/images/cutout-3.webp" loading="lazy" decoding="async" alt="Stage 03 Solution Discovery Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <div class="card-collapsed-view absolute inset-0 p-3 sm:p-5 flex flex-col justify-between items-center z-20 transition-opacity duration-300 pointer-events-none">
                         <span class="text-[9px] sm:text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 border border-brand-ruby/30 px-1.5 sm:px-2 py-0.5 rounded-md">03</span>
@@ -541,7 +544,7 @@
                 <div class="expand-card relative rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#0d0d0d] flex-1 cursor-pointer group shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-[2px] bg-brand-ruby/40 group-hover:bg-brand-ruby transition-colors duration-300"></div>
                     <div class="card-cutout-layer absolute inset-0 z-10 pointer-events-none overflow-hidden flex items-end justify-end pr-1 sm:pr-2 md:pr-6 opacity-20 sm:opacity-40 md:opacity-100">
-                        <img src="./assets/images/cutout-4.png" alt="Stage 04 Triumphant Climax Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
+                        <img src="./assets/images/cutout-4.webp" loading="lazy" decoding="async" alt="Stage 04 Triumphant Climax Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <div class="card-collapsed-view absolute inset-0 p-3 sm:p-5 flex flex-col justify-between items-center z-20 transition-opacity duration-300 pointer-events-none">
                         <span class="text-[9px] sm:text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 border border-brand-ruby/30 px-1.5 sm:px-2 py-0.5 rounded-md">04</span>
@@ -568,7 +571,7 @@
                 <div class="expand-card relative rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#0d0d0d] flex-1 cursor-pointer group shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-[2px] bg-brand-ruby/40 group-hover:bg-brand-ruby transition-colors duration-300"></div>
                     <div class="card-cutout-layer absolute inset-0 z-10 pointer-events-none overflow-hidden flex items-end justify-end pr-1 sm:pr-2 md:pr-6 opacity-20 sm:opacity-40 md:opacity-100">
-                        <img src="./assets/images/cutout-5.png" alt="Stage 05 Brand Outro Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
+                        <img src="./assets/images/cutout-5.webp" loading="lazy" decoding="async" alt="Stage 05 Brand Outro Boy" class="card-cutout-img h-[80%] md:h-[90%] w-auto object-contain object-bottom filter contrast-110 transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <div class="card-collapsed-view absolute inset-0 p-3 sm:p-5 flex flex-col justify-between items-center z-20 transition-opacity duration-300 pointer-events-none">
                         <span class="text-[9px] sm:text-[10px] font-mono font-bold text-brand-ruby tracking-widest uppercase bg-brand-ruby/10 border border-brand-ruby/30 px-1.5 sm:px-2 py-0.5 rounded-md">05</span>
@@ -718,7 +721,7 @@
                         <!-- FRONT FACE: IMAGE SPANS ENTIRE CARD BOX -->
                         <div class="s06-flip-front rounded-2xl p-4 flex flex-col justify-between shadow-xl overflow-hidden relative group text-white border border-black/10">
                             <!-- Full Cover Background Image -->
-                            <img src="assets/images/work/work-1.jpg" alt="Character Design" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+                            <img src="assets/images/work/work-1.webp" loading="lazy" decoding="async" alt="Character Design" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
                             
                             <!-- Vignette Gradient Overlay for Readability -->
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 z-10 pointer-events-none"></div>
@@ -767,7 +770,7 @@
                         
                         <!-- FRONT FACE: IMAGE SPANS ENTIRE CARD BOX -->
                         <div class="s06-flip-front rounded-2xl p-4 flex flex-col justify-between shadow-xl overflow-hidden relative group text-white border border-black/10">
-                            <img src="assets/images/work/work-2.jpg" alt="World Building" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+                            <img src="assets/images/work/work-2.webp" loading="lazy" decoding="async" alt="World Building" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
                             
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 z-10 pointer-events-none"></div>
 
@@ -813,7 +816,7 @@
                         
                         <!-- FRONT FACE: IMAGE SPANS ENTIRE CARD BOX -->
                         <div class="s06-flip-front rounded-2xl p-4 flex flex-col justify-between shadow-xl overflow-hidden relative group text-white border border-black/10">
-                            <img src="assets/images/work/work-3.jpg" alt="Scene Composition" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+                            <img src="assets/images/work/work-3.webp" loading="lazy" decoding="async" alt="Scene Composition" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
                             
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 z-10 pointer-events-none"></div>
 
@@ -859,7 +862,7 @@
                         
                         <!-- FRONT FACE: IMAGE SPANS ENTIRE CARD BOX -->
                         <div class="s06-flip-front rounded-2xl p-4 flex flex-col justify-between shadow-xl overflow-hidden relative group text-white border border-black/10">
-                            <img src="assets/images/work/work-4.jpg" alt="Animation Style" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+                            <img src="assets/images/work/work-4.webp" loading="lazy" decoding="async" alt="Animation Style" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
                             
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 z-10 pointer-events-none"></div>
 
@@ -905,7 +908,7 @@
                         
                         <!-- FRONT FACE: IMAGE SPANS ENTIRE CARD BOX -->
                         <div class="s06-flip-front rounded-2xl p-4 flex flex-col justify-between shadow-xl overflow-hidden relative group text-white border border-[#9B111E]/40">
-                            <img src="assets/images/work/work-5.jpg" alt="Visual Storytelling" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+                            <img src="assets/images/work/work-5.webp" loading="lazy" decoding="async" alt="Visual Storytelling" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
                             
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 z-10 pointer-events-none"></div>
 
@@ -1318,26 +1321,26 @@
             <div class="s09a-marquee-track">
                 <div class="s09a-marquee-content animate-s09-marquee">
                     <!-- 16:9 Landscape -->
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-1.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-1.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 1:1 Square -->
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-2.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-2.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 4:3 Studio Rectangle -->
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-3.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-3.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 16:9 Landscape -->
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-4.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-4.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 1:1 Square -->
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-5.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-5.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 4:3 Studio Rectangle -->
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-6.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-6.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
                 </div>
                 <!-- Duplicate Content for Seamless Infinite Loop -->
                 <div class="s09a-marquee-content animate-s09-marquee" aria-hidden="true">
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-7.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-8.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-9.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-10.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-11.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-12.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-7.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-8.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-9.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-10.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-11.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-12.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
                 </div>
             </div>
 
@@ -1345,26 +1348,26 @@
             <div class="s09a-marquee-track">
                 <div class="s09a-marquee-content animate-s09-marquee-fast">
                     <!-- 4:3 Studio Rectangle -->
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-13.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-13.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 16:9 Landscape -->
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-14.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-14.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 1:1 Square -->
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-15.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-15.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 4:3 Studio Rectangle -->
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-16.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-16.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 16:9 Landscape -->
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-17.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-17.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 1:1 Square -->
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-18.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-18.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
                 </div>
                 <!-- Duplicate Content for Seamless Loop -->
                 <div class="s09a-marquee-content animate-s09-marquee-fast" aria-hidden="true">
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-19.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-20.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-21.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-22.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-23.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-24.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-19.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-20.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-21.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-22.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-23.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-24.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
                 </div>
             </div>
 
@@ -1372,26 +1375,26 @@
             <div class="s09a-marquee-track">
                 <div class="s09a-marquee-content animate-s09-marquee-slow">
                     <!-- 1:1 Square -->
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-25.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-25.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 16:9 Landscape -->
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-26.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-26.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 4:3 Studio Rectangle -->
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-27.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-27.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 1:1 Square -->
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-28.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-28.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 16:9 Landscape -->
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-29.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-29.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
                     <!-- 4:3 Studio Rectangle -->
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-30.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-30.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
                 </div>
                 <!-- Duplicate Content for Seamless Loop -->
                 <div class="s09a-marquee-content animate-s09-marquee-slow" aria-hidden="true">
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-31.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-32.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-33.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-34.jpg" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-35.jpg" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
-                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-36.jpg" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-31.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-32.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-33.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-36 sm:w-44 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-34.webp" loading="lazy" decoding="async" alt="Work 02" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-64 sm:w-80 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-35.webp" loading="lazy" decoding="async" alt="Work 03" class="w-full h-full object-cover grayscale" /></div>
+                    <div class="w-48 sm:w-60 h-36 sm:h-44 rounded-xl bg-neutral-800 shrink-0 overflow-hidden border border-black/10"><img src="./assets/images/work/work-36.webp" loading="lazy" decoding="async" alt="Work 01" class="w-full h-full object-cover grayscale" /></div>
                 </div>
             </div>
 
@@ -1439,7 +1442,7 @@
                                 
                                 <!-- FRONT CANVAS -->
                                 <div class="s09-card-front rounded-2xl overflow-hidden border border-[#9B111E] shadow-2xl relative flex flex-col justify-between p-4 md:p-5 group">
-                                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                                    <video preload="none" poster="assets/videos/posters/work-1.webp" muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
                                         <source src="./assets/videos/work-1.mp4" type="video/mp4" />
                                     </video>
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50 z-10"></div>
@@ -1526,7 +1529,7 @@
                                 
                                 <!-- FRONT CANVAS -->
                                 <div class="s09-card-front rounded-2xl overflow-hidden border border-black/15 shadow-2xl relative flex flex-col justify-between p-4 md:p-5 group">
-                                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                                    <video preload="none" poster="assets/videos/posters/work-2.webp" muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
                                         <source src="./assets/videos/work-2.mp4" type="video/mp4" />
                                     </video>
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50 z-10"></div>
@@ -1606,7 +1609,7 @@
                                 
                                 <!-- FRONT CANVAS -->
                                 <div class="s09-card-front rounded-2xl overflow-hidden border border-black/15 shadow-2xl relative flex flex-col justify-between p-4 md:p-5 group">
-                                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                                    <video preload="none" poster="assets/videos/posters/work-3.webp" muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
                                         <source src="./assets/videos/work-3.mp4" type="video/mp4" />
                                     </video>
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50 z-10"></div>
@@ -1689,7 +1692,7 @@
                                 
                                 <!-- FRONT CANVAS -->
                                 <div class="s09-card-front rounded-2xl overflow-hidden border border-black/15 shadow-2xl relative flex flex-col justify-between p-4 md:p-5 group">
-                                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                                    <video preload="none" poster="assets/videos/posters/work-4.webp" muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
                                         <source src="./assets/videos/work-4.mp4" type="video/mp4" />
                                     </video>
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50 z-10"></div>
@@ -1771,7 +1774,7 @@
                                 
                                 <!-- FRONT CANVAS -->
                                 <div class="s09-card-front rounded-2xl overflow-hidden border border-black/15 shadow-2xl relative flex flex-col justify-between p-4 md:p-5 group">
-                                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                                    <video preload="none" poster="assets/videos/posters/work-5.webp" muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
                                         <source src="./assets/videos/work-5.mp4" type="video/mp4" />
                                     </video>
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50 z-10"></div>
@@ -1857,27 +1860,27 @@
                             <!-- 6-Grid Collage displaying ALL 5 work videos + "+25 MORE" Badge -->
                             <div class="grid grid-cols-3 gap-1.5 w-full h-36 md:h-40 rounded-xl overflow-hidden my-auto border border-white/10 p-1.5 bg-white/5">
                                 <div class="rounded-lg overflow-hidden bg-neutral-900 border border-white/5">
-                                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                                    <video preload="none" poster="assets/videos/posters/work-1.webp" muted loop playsinline class="w-full h-full object-cover">
                                         <source src="./assets/videos/work-1.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                                 <div class="rounded-lg overflow-hidden bg-neutral-900 border border-white/5">
-                                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                                    <video preload="none" poster="assets/videos/posters/work-2.webp" muted loop playsinline class="w-full h-full object-cover">
                                         <source src="./assets/videos/work-2.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                                 <div class="rounded-lg overflow-hidden bg-neutral-900 border border-white/5">
-                                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                                    <video preload="none" poster="assets/videos/posters/work-3.webp" muted loop playsinline class="w-full h-full object-cover">
                                         <source src="./assets/videos/work-3.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                                 <div class="rounded-lg overflow-hidden bg-neutral-900 border border-white/5">
-                                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                                    <video preload="none" poster="assets/videos/posters/work-4.webp" muted loop playsinline class="w-full h-full object-cover">
                                         <source src="./assets/videos/work-4.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                                 <div class="rounded-lg overflow-hidden bg-neutral-900 border border-white/5">
-                                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                                    <video preload="none" poster="assets/videos/posters/work-5.webp" muted loop playsinline class="w-full h-full object-cover">
                                         <source src="./assets/videos/work-5.mp4" type="video/mp4" />
                                     </video>
                                 </div>
@@ -2049,7 +2052,7 @@
 
                     <!-- Card 03: "WE'RE JUST GETTING STARTED" -->
                     <div class="tm-glass-card w-[290px] sm:w-[340px] md:w-[380px] h-[360px] md:h-[370px] rounded-2xl overflow-hidden border border-[#9B111E] shadow-2xl shrink-0 relative group flex flex-col justify-between p-5 sm:p-6 cursor-pointer" onclick="window.location.href='pages/about.html'">
-                        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                        <video preload="none" poster="assets/videos/posters/work-6.webp" muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
                             <source src="./assets/videos/work-6.mp4" type="video/mp4" />
                         </video>
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/40 z-10"></div>
@@ -2207,16 +2210,16 @@
             <div class="lg:col-span-5 order-first lg:order-last flex items-center justify-center z-10 mb-2 lg:mb-0">
                 <div class="relative w-full max-w-[340px] sm:max-w-[480px] h-[190px] sm:h-[260px] lg:h-[360px] rounded-2xl sm:rounded-3xl overflow-hidden border border-white/20 shadow-[0_25px_60px_-15px_rgba(155,17,30,0.3)] transition-transform duration-500 ease-out" id="s11-floating-card">
                     
-                    <video id="s11-media-0" autoplay loop muted playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
+                    <video id="s11-media-0" preload="none" poster="assets/videos/posters/work-11.webp" muted loop playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
                         <source src="./assets/videos/work-11.mp4" type="video/mp4" />
                     </video>
-                    <video id="s11-media-1" autoplay loop muted playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                    <video id="s11-media-1" preload="none" poster="assets/videos/posters/work-12.webp" muted loop playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
                         <source src="./assets/videos/work-12.mp4" type="video/mp4" />
                     </video>
-                    <video id="s11-media-2" autoplay loop muted playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                    <video id="s11-media-2" preload="none" poster="assets/videos/posters/work-13.webp" muted loop playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
                         <source src="./assets/videos/work-13.mp4" type="video/mp4" />
                     </video>
-                    <video id="s11-media-3" autoplay loop muted playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                    <video id="s11-media-3" preload="none" poster="assets/videos/posters/work-14.webp" muted loop playsinline class="s11-card-media absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
                         <source src="./assets/videos/work-14.mp4" type="video/mp4" />
                     </video>
 
@@ -2414,10 +2417,10 @@
                     <!-- Mobile Portfolio Highlight Strip (Highlights Portfolio in Mobile View) -->
                     <div class="sm:hidden mt-3.5 pt-2 border-t border-white/10 flex flex-col items-center gap-1.5">
                         <div class="flex items-center justify-center -space-x-2">
-                            <img src="./assets/images/work/work-1.jpg" alt="Portfolio 1" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
-                            <img src="./assets/images/work/work-3.jpg" alt="Portfolio 2" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
-                            <img src="./assets/images/work/work-7.jpg" alt="Portfolio 3" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
-                            <img src="./assets/images/work/work-12.jpg" alt="Portfolio 4" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <img src="./assets/images/work/work-1.webp" loading="lazy" decoding="async" alt="Portfolio 1" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <img src="./assets/images/work/work-3.webp" loading="lazy" decoding="async" alt="Portfolio 2" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <img src="./assets/images/work/work-7.webp" loading="lazy" decoding="async" alt="Portfolio 3" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
+                            <img src="./assets/images/work/work-12.webp" loading="lazy" decoding="async" alt="Portfolio 4" class="w-6 h-6 rounded-full border border-brand-ruby object-cover shadow-[0_0_8px_rgba(155,17,30,0.6)]" />
                             <div class="w-6 h-6 rounded-full bg-brand-ruby/40 border border-brand-ruby flex items-center justify-center text-[7.5px] font-mono font-bold text-white shadow-[0_0_8px_rgba(155,17,30,0.6)]">
                                 +25
                             </div>
@@ -2602,11 +2605,11 @@
                         
                         <!-- Background Video -->
                         <video id="hero-bg-video" 
-                            autoplay 
-                            loop 
+                            preload="none" 
+                            poster="assets/videos/posters/work.webp"
                             muted 
+                            loop 
                             playsinline 
-                            preload="auto" 
                             class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none rounded-2xl sm:rounded-[2rem]">
                             <source src="assets/videos/work.mp4" type="video/mp4" />
                         </video>
@@ -2761,7 +2764,7 @@
                     <div>
                         <!-- Studio Identity Node -->
                         <div class="flex items-center gap-3.5 mb-6">
-                            <img src="assets/images/kausthuba-logo.png" alt="Kausthuba Studio Logo" class="w-10 h-10 rounded-xl object-cover shadow-[0_0_15px_rgba(155,17,30,0.35)] border border-[#9B111E]/20" />
+                            <img src="assets/images/kausthuba-logo.webp" alt="Kausthuba Studio Logo" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 rounded-xl object-cover shadow-[0_0_15px_rgba(155,17,30,0.35)] border border-[#9B111E]/20" />
                             <span class="text-base font-sans font-black tracking-tight uppercase text-[#111111]">KAUSTHUBA | AI CREATIVE STUDIO</span>
                         </div>
 
@@ -2861,7 +2864,7 @@
     </footer>
 
 
-    <script src="js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ const headerContent = `    <!-- ================================================
             
             <!-- Brand Logo -->
             <a href="../index.html#hero" class="flex items-center gap-3 group">
-                <img src="../assets/images/kausthuba-logo.png" alt="Kausthuba Studio Logo" class="h-9 w-9 rounded-full object-cover border border-brand-ruby shadow-md transition-transform duration-300 group-hover:scale-110" />
+                <img src="../assets/images/kausthuba-logo.webp" alt="Kausthuba Studio Logo" width="36" height="36" class="h-9 w-9 rounded-full object-cover border border-brand-ruby shadow-md transition-transform duration-300 group-hover:scale-110" />
                 <div class="flex flex-col text-left">
                     <span class="text-xs font-black tracking-[0.25em] uppercase text-brand-black">KAUSTHUBA</span>
                     <span class="text-[9px] font-mono tracking-widest text-brand-ruby uppercase">AI Creative Studio</span>
@@ -106,7 +106,7 @@ const headerContent = `    <!-- ================================================
         <!-- Top bar with brand and close button (Fixed Header) -->
         <div class="flex items-center justify-between border-b border-white/10 pb-3.5 shrink-0">
             <a href="../index.html#hero" class="flex items-center gap-3 mobile-nav-link group">
-                <img src="../assets/images/kausthuba-logo.png" alt="Kausthuba Logo" class="w-9 h-9 rounded-full border border-brand-ruby shadow-md" />
+                <img src="../assets/images/kausthuba-logo.webp" alt="Kausthuba Logo" width="36" height="36" loading="lazy" decoding="async" class="w-9 h-9 rounded-full border border-brand-ruby shadow-md" />
                 <div class="flex flex-col text-left">
                     <span class="text-xs font-black tracking-[0.25em] uppercase text-white font-mono">KAUSTHUBA</span>
                     <span class="text-[9px] font-mono tracking-widest text-brand-ruby uppercase">AI Creative Studio</span>
@@ -211,7 +211,7 @@ const footerContent = `    <!-- ================================================
                     <div>
                         <!-- Studio Identity Node -->
                         <div class="flex items-center gap-3.5 mb-6">
-                            <img src="../assets/images/kausthuba-logo.png" alt="Kausthuba Studio Logo" class="w-10 h-10 rounded-xl object-cover shadow-[0_0_15px_rgba(155,17,30,0.35)] border border-[#9B111E]/20" />
+                            <img src="../assets/images/kausthuba-logo.webp" alt="Kausthuba Studio Logo" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 rounded-xl object-cover shadow-[0_0_15px_rgba(155,17,30,0.35)] border border-[#9B111E]/20" />
                             <span class="text-base font-sans font-black tracking-tight uppercase text-[#111111]">KAUSTHUBA | AI CREATIVE STUDIO</span>
                         </div>
 

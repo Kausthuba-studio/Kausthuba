@@ -22,7 +22,7 @@ const SITE_CONFIG = {
         name: "KAUSTHUBA",
         tagline: "AI Creative Studio",
         subTagline: "Turning ideas into digital experiences",
-        logo: "assets/images/kausthuba-logo.png",
+        logo: "assets/images/kausthuba-logo.webp",
         location: "Rajahmundry, Andhra Pradesh, India",
         coordinates: "17.000° N, 81.780° E • IST UTC +5:30",
         timezone: "IST",
@@ -33,7 +33,7 @@ const SITE_CONFIG = {
             instagram: {
                 handle: "@kausthuba.studio",
                 url: "https://www.instagram.com/kausthuba.studio/",
-                qrImage: "assets/images/qr-instagram.jpeg"
+                qrImage: "assets/images/qr-instagram.webp"
             },
             youtube: {
                 badge: "YT",
@@ -94,7 +94,7 @@ const SITE_CONFIG = {
                 number: "01",
                 timestamp: "STAGE 01 — 00:03s",
                 tag: "// HOOK",
-                cutout: "./assets/images/cutout-1.png",
+                cutout: "./assets/images/cutout-1.webp",
                 cutoutAlt: "Stage 01 Disruption Hook Boy",
                 category: "CHARACTER INTRODUCTION",
                 title: "The Disruption Hook",
@@ -105,7 +105,7 @@ const SITE_CONFIG = {
                 number: "02",
                 timestamp: "STAGE 02 — 00:25s",
                 tag: "// CONFLICT",
-                cutout: "./assets/images/cutout-2.png",
+                cutout: "./assets/images/cutout-2.webp",
                 cutoutAlt: "Stage 02 Problem Friction Boy",
                 category: "BRAND PROBLEM FRICTION",
                 title: "The Core Problem",
@@ -116,7 +116,7 @@ const SITE_CONFIG = {
                 number: "03",
                 timestamp: "STAGE 03 — 00:50s",
                 tag: "// SOLUTION",
-                cutout: "./assets/images/cutout-3.png",
+                cutout: "./assets/images/cutout-3.webp",
                 cutoutAlt: "Stage 03 Solution Discovery Boy",
                 category: "PRODUCT DISCOVERY",
                 title: "The Turning Point",
@@ -127,7 +127,7 @@ const SITE_CONFIG = {
                 number: "04",
                 timestamp: "STAGE 04 — 01:25s",
                 tag: "// TRIUMPH",
-                cutout: "./assets/images/cutout-4.png",
+                cutout: "./assets/images/cutout-4.webp",
                 cutoutAlt: "Stage 04 Triumphant Climax Boy",
                 category: "TRANSFORMATION ARC",
                 title: "The Triumphant Climax",
@@ -138,7 +138,7 @@ const SITE_CONFIG = {
                 number: "05",
                 timestamp: "STAGE 05 — 02:00s",
                 tag: "// RESOLUTION",
-                cutout: "./assets/images/cutout-5.png",
+                cutout: "./assets/images/cutout-5.webp",
                 cutoutAlt: "Stage 05 Brand Outro Boy",
                 category: "CALL TO ACTION",
                 title: "Brand Outro & Resolution",
@@ -158,7 +158,7 @@ const SITE_CONFIG = {
                 step: "STEP 01",
                 stage: "STAGE_01",
                 pillarClass: "card-pillar-1",
-                image: "assets/images/work/work-1.jpg",
+                image: "assets/images/work/work-1.webp",
                 title: "Character Design",
                 tag: "RESEARCH & CONCEPT",
                 detailsTitle: "STEP 01 DETAILS",
@@ -169,7 +169,7 @@ const SITE_CONFIG = {
                 step: "STEP 02",
                 stage: "STAGE_02",
                 pillarClass: "card-pillar-2",
-                image: "assets/images/work/work-2.jpg",
+                image: "assets/images/work/work-2.webp",
                 title: "World Building",
                 tag: "VISUAL CONSISTENCY",
                 detailsTitle: "STEP 02 DETAILS",
@@ -180,7 +180,7 @@ const SITE_CONFIG = {
                 step: "STEP 03",
                 stage: "STAGE_03",
                 pillarClass: "card-pillar-3",
-                image: "assets/images/work/work-3.jpg",
+                image: "assets/images/work/work-3.webp",
                 title: "Scene Composition",
                 tag: "VIDEO PRODUCTION",
                 detailsTitle: "STEP 03 DETAILS",
@@ -191,7 +191,7 @@ const SITE_CONFIG = {
                 step: "STEP 04",
                 stage: "STAGE_04",
                 pillarClass: "card-pillar-4",
-                image: "assets/images/work/work-4.jpg",
+                image: "assets/images/work/work-4.webp",
                 title: "Animation Style",
                 tag: "VISUAL DIRECTION",
                 detailsTitle: "STEP 04 DETAILS",
@@ -202,7 +202,7 @@ const SITE_CONFIG = {
                 step: "STEP 05",
                 stage: "STAGE_05",
                 pillarClass: "card-pillar-5",
-                image: "assets/images/work/work-5.jpg",
+                image: "assets/images/work/work-5.webp",
                 title: "Visual Storytelling",
                 tag: "SOUND & MUSIC",
                 detailsTitle: "STEP 05 DETAILS",
@@ -281,46 +281,46 @@ const SITE_CONFIG = {
     // ------------------------------------------------------------------------
     wallOfWorks: {
         row1: [
-            { src: "./assets/images/work/work-1.jpg", alt: "Work 01", aspect: "16:9" },
-            { src: "./assets/images/work/work-2.jpg", alt: "Work 02", aspect: "1:1" },
-            { src: "./assets/images/work/work-3.jpg", alt: "Work 03", aspect: "4:3" },
-            { src: "./assets/images/work/work-4.jpg", alt: "Work 04", aspect: "16:9" },
-            { src: "./assets/images/work/work-5.jpg", alt: "Work 05", aspect: "1:1" },
-            { src: "./assets/images/work/work-6.jpg", alt: "Work 06", aspect: "4:3" },
-            { src: "./assets/images/work/work-7.jpg", alt: "Work 07", aspect: "16:9" },
-            { src: "./assets/images/work/work-8.jpg", alt: "Work 08", aspect: "1:1" },
-            { src: "./assets/images/work/work-9.jpg", alt: "Work 09", aspect: "4:3" },
-            { src: "./assets/images/work/work-10.jpg", alt: "Work 10", aspect: "16:9" },
-            { src: "./assets/images/work/work-11.jpg", alt: "Work 11", aspect: "1:1" },
-            { src: "./assets/images/work/work-12.jpg", alt: "Work 12", aspect: "4:3" }
+            { src: "./assets/images/work/work-1.webp", alt: "Work 01", aspect: "16:9" },
+            { src: "./assets/images/work/work-2.webp", alt: "Work 02", aspect: "1:1" },
+            { src: "./assets/images/work/work-3.webp", alt: "Work 03", aspect: "4:3" },
+            { src: "./assets/images/work/work-4.webp", alt: "Work 04", aspect: "16:9" },
+            { src: "./assets/images/work/work-5.webp", alt: "Work 05", aspect: "1:1" },
+            { src: "./assets/images/work/work-6.webp", alt: "Work 06", aspect: "4:3" },
+            { src: "./assets/images/work/work-7.webp", alt: "Work 07", aspect: "16:9" },
+            { src: "./assets/images/work/work-8.webp", alt: "Work 08", aspect: "1:1" },
+            { src: "./assets/images/work/work-9.webp", alt: "Work 09", aspect: "4:3" },
+            { src: "./assets/images/work/work-10.webp", alt: "Work 10", aspect: "16:9" },
+            { src: "./assets/images/work/work-11.webp", alt: "Work 11", aspect: "1:1" },
+            { src: "./assets/images/work/work-12.webp", alt: "Work 12", aspect: "4:3" }
         ],
         row2: [
-            { src: "./assets/images/work/work-13.jpg", alt: "Work 13", aspect: "4:3" },
-            { src: "./assets/images/work/work-14.jpg", alt: "Work 14", aspect: "16:9" },
-            { src: "./assets/images/work/work-15.jpg", alt: "Work 15", aspect: "1:1" },
-            { src: "./assets/images/work/work-16.jpg", alt: "Work 16", aspect: "4:3" },
-            { src: "./assets/images/work/work-17.jpg", alt: "Work 17", aspect: "16:9" },
-            { src: "./assets/images/work/work-18.jpg", alt: "Work 18", aspect: "1:1" },
-            { src: "./assets/images/work/work-19.jpg", alt: "Work 19", aspect: "4:3" },
-            { src: "./assets/images/work/work-20.jpg", alt: "Work 20", aspect: "16:9" },
-            { src: "./assets/images/work/work-21.jpg", alt: "Work 21", aspect: "1:1" },
-            { src: "./assets/images/work/work-22.jpg", alt: "Work 22", aspect: "4:3" },
-            { src: "./assets/images/work/work-23.jpg", alt: "Work 23", aspect: "16:9" },
-            { src: "./assets/images/work/work-24.jpg", alt: "Work 24", aspect: "1:1" }
+            { src: "./assets/images/work/work-13.webp", alt: "Work 13", aspect: "4:3" },
+            { src: "./assets/images/work/work-14.webp", alt: "Work 14", aspect: "16:9" },
+            { src: "./assets/images/work/work-15.webp", alt: "Work 15", aspect: "1:1" },
+            { src: "./assets/images/work/work-16.webp", alt: "Work 16", aspect: "4:3" },
+            { src: "./assets/images/work/work-17.webp", alt: "Work 17", aspect: "16:9" },
+            { src: "./assets/images/work/work-18.webp", alt: "Work 18", aspect: "1:1" },
+            { src: "./assets/images/work/work-19.webp", alt: "Work 19", aspect: "4:3" },
+            { src: "./assets/images/work/work-20.webp", alt: "Work 20", aspect: "16:9" },
+            { src: "./assets/images/work/work-21.webp", alt: "Work 21", aspect: "1:1" },
+            { src: "./assets/images/work/work-22.webp", alt: "Work 22", aspect: "4:3" },
+            { src: "./assets/images/work/work-23.webp", alt: "Work 23", aspect: "16:9" },
+            { src: "./assets/images/work/work-24.webp", alt: "Work 24", aspect: "1:1" }
         ],
         row3: [
-            { src: "./assets/images/work/work-25.jpg", alt: "Work 25", aspect: "1:1" },
-            { src: "./assets/images/work/work-26.jpg", alt: "Work 26", aspect: "16:9" },
-            { src: "./assets/images/work/work-27.jpg", alt: "Work 27", aspect: "4:3" },
-            { src: "./assets/images/work/work-28.jpg", alt: "Work 28", aspect: "1:1" },
-            { src: "./assets/images/work/work-29.jpg", alt: "Work 29", aspect: "16:9" },
-            { src: "./assets/images/work/work-30.jpg", alt: "Work 30", aspect: "4:3" },
-            { src: "./assets/images/work/work-31.jpg", alt: "Work 31", aspect: "1:1" },
-            { src: "./assets/images/work/work-32.jpg", alt: "Work 32", aspect: "16:9" },
-            { src: "./assets/images/work/work-33.jpg", alt: "Work 33", aspect: "4:3" },
-            { src: "./assets/images/work/work-34.jpg", alt: "Work 34", aspect: "1:1" },
-            { src: "./assets/images/work/work-35.jpg", alt: "Work 35", aspect: "4:3" },
-            { src: "./assets/images/work/work-36.jpg", alt: "Work 36", aspect: "16:9" }
+            { src: "./assets/images/work/work-25.webp", alt: "Work 25", aspect: "1:1" },
+            { src: "./assets/images/work/work-26.webp", alt: "Work 26", aspect: "16:9" },
+            { src: "./assets/images/work/work-27.webp", alt: "Work 27", aspect: "4:3" },
+            { src: "./assets/images/work/work-28.webp", alt: "Work 28", aspect: "1:1" },
+            { src: "./assets/images/work/work-29.webp", alt: "Work 29", aspect: "16:9" },
+            { src: "./assets/images/work/work-30.webp", alt: "Work 30", aspect: "4:3" },
+            { src: "./assets/images/work/work-31.webp", alt: "Work 31", aspect: "1:1" },
+            { src: "./assets/images/work/work-32.webp", alt: "Work 32", aspect: "16:9" },
+            { src: "./assets/images/work/work-33.webp", alt: "Work 33", aspect: "4:3" },
+            { src: "./assets/images/work/work-34.webp", alt: "Work 34", aspect: "1:1" },
+            { src: "./assets/images/work/work-35.webp", alt: "Work 35", aspect: "4:3" },
+            { src: "./assets/images/work/work-36.webp", alt: "Work 36", aspect: "16:9" }
         ]
     },
 
@@ -333,6 +333,7 @@ const SITE_CONFIG = {
             cardClass: "card-01",
             isActive: true,
             video: "./assets/videos/work-1.mp4",
+            poster: "./assets/videos/posters/work-1.webp",
             badge: "01 / BRAND FILM",
             caseCode: "CASE_01",
             client: "AETHER HOROLOGY",
@@ -361,6 +362,7 @@ const SITE_CONFIG = {
             cardClass: "card-02",
             isActive: false,
             video: "./assets/videos/work-2.mp4",
+            poster: "./assets/videos/posters/work-2.webp",
             badge: "02 / 3D COMMERCIAL",
             caseCode: "CASE_02",
             client: "VALKYRIE AUDIO",
@@ -388,6 +390,7 @@ const SITE_CONFIG = {
             cardClass: "card-03",
             isActive: false,
             video: "./assets/videos/work-3.mp4",
+            poster: "./assets/videos/posters/work-3.webp",
             badge: "03 / FLAGSHIP SHORT",
             caseCode: "CASE_03",
             client: "STUDIO ORIGINAL FILM",
@@ -416,6 +419,7 @@ const SITE_CONFIG = {
             cardClass: "card-04",
             isActive: false,
             video: "./assets/videos/work-4.mp4",
+            poster: "./assets/videos/posters/work-4.webp",
             badge: "04 / FEED CAMPAIGN",
             caseCode: "CASE_04",
             client: "KINETIC LABS",
@@ -444,6 +448,7 @@ const SITE_CONFIG = {
             cardClass: "card-05",
             isActive: false,
             video: "./assets/videos/work-5.mp4",
+            poster: "./assets/videos/posters/work-5.webp",
             badge: "05 / CINEMATIC IDENTITY",
             caseCode: "CASE_05",
             client: "AURA LABS",
@@ -480,6 +485,13 @@ const SITE_CONFIG = {
                 "./assets/videos/work-3.mp4",
                 "./assets/videos/work-4.mp4",
                 "./assets/videos/work-5.mp4"
+            ],
+            collagePosters: [
+                "./assets/videos/posters/work-1.webp",
+                "./assets/videos/posters/work-2.webp",
+                "./assets/videos/posters/work-3.webp",
+                "./assets/videos/posters/work-4.webp",
+                "./assets/videos/posters/work-5.webp"
             ],
             moreBadgeText: "+25",
             moreBadgeSub: "MORE",
@@ -523,6 +535,7 @@ const SITE_CONFIG = {
         {
             type: "videoCard",
             video: "./assets/videos/work-6.mp4",
+            poster: "./assets/videos/posters/work-6.webp",
             topBadge: "// REEL PAUSED",
             studioYear: "STUDIO_2026",
             eyebrow: "// WE RAN OUT OF CARDS",
@@ -544,7 +557,8 @@ const SITE_CONFIG = {
             hudValue: "CUSTOMER FRICTION",
             title: "The Problem",
             description: "Show the customer's frustration before the product. We capture real-world struggles and friction points through an engaging, relatable character scenario.",
-            video: "./assets/videos/work-11.mp4"
+            video: "./assets/videos/work-11.mp4",
+            poster: "./assets/videos/posters/work-11.webp"
         },
         {
             index: "1",
@@ -553,7 +567,8 @@ const SITE_CONFIG = {
             hudValue: "PRODUCT VALUE",
             title: "The Solution",
             description: "Bring the product's core value to life through a clear, visual story showing exactly how your brand solves the customer's challenge.",
-            video: "./assets/videos/work-12.mp4"
+            video: "./assets/videos/work-12.mp4",
+            poster: "./assets/videos/posters/work-12.webp"
         },
         {
             index: "2",
@@ -562,7 +577,8 @@ const SITE_CONFIG = {
             hudValue: "MARKET STANDOUT",
             title: "The Difference",
             description: "Explain why your brand stands out from conventional alternatives, highlighting your unique differentiator in a memorable animated narrative.",
-            video: "./assets/videos/work-13.mp4"
+            video: "./assets/videos/work-13.mp4",
+            poster: "./assets/videos/posters/work-13.webp"
         },
         {
             index: "3",
@@ -571,7 +587,8 @@ const SITE_CONFIG = {
             hudValue: "BRAND BOND",
             title: "The Emotion",
             description: "Build a memorable, character-driven narrative around the brand that resonates emotionally with viewers and inspires lasting customer trust.",
-            video: "./assets/videos/work-14.mp4"
+            video: "./assets/videos/work-14.mp4",
+            poster: "./assets/videos/posters/work-14.webp"
         }
     ],
 
@@ -666,7 +683,8 @@ const SITE_CONFIG = {
     // 13. SECTION 14 BENTO PRODUCTION MATRIX (#sec-14-stage)
     // ------------------------------------------------------------------------
     bento: {
-        centerVideo: "assets/videos/work.mp4"
+        centerVideo: "assets/videos/work.mp4",
+        centerVideoPoster: "assets/videos/posters/work.webp"
     }
 };
 

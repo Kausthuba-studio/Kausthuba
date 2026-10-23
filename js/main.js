@@ -1036,14 +1036,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         wrapper.innerHTML = ""; // Clear container
 
-        // 1. Generate 25 Square Image Cards (work-1.jpg through work-25.jpg)
+        // 1. Generate 25 Square Image Cards (work-1.webp through work-25.webp)
         for (let i = 1; i <= totalImages; i++) {
             const card = document.createElement("div");
             card.className = "orbit-image-card pointer-events-auto";
             
             const img = document.createElement("img");
-            img.src = `./assets/images/work/work-${i}.jpg`;
+            img.src = `./assets/images/work/work-${i}.webp`;
             img.alt = `Portfolio Work ${i}`;
+            img.loading = "lazy";
+            img.decoding = "async";
+            img.width = 120;
+            img.height = 120;
             
             card.appendChild(img);
             wrapper.appendChild(card);
@@ -1641,6 +1645,47 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initInquiryFormHandler);
 } else {
     initInquiryFormHandler();
+}
+
+// =========================================================================
+// HIGH-EFFICIENCY VIDEO LAZY-LOADER & PLAYBACK OBSERVER
+// =========================================================================
+function initLazyVideos() {
+    const videos = document.querySelectorAll('video');
+    if (!videos.length) return;
+
+    if ('IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting) {
+                    if (video.paused && video.dataset.autoplay !== 'false') {
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.catch(() => {});
+                        }
+                    }
+                } else {
+                    if (!video.paused) {
+                        video.pause();
+                    }
+                }
+            });
+        }, {
+            rootMargin: '250px 0px 250px 0px',
+            threshold: 0.01
+        });
+
+        videos.forEach(video => {
+            videoObserver.observe(video);
+        });
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLazyVideos);
+} else {
+    initLazyVideos();
 }
 
 // =========================================================================
