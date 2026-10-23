@@ -1,17 +1,32 @@
-/* Custom Browser Scrollbar (Strict Palette + Spacing) */
-::-webkit-scrollbar {
-    width: 12px;
+/* Custom Browser Scrollbar (Desktop Pointer Devices Only) */
+@media (min-width: 769px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #9B111E;
+        border-radius: 9999px;
+        border: 2px solid #050505;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #D4AF37;
+    }
 }
-::-webkit-scrollbar-track {
-    background: #050505;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #9B111E;
-    border-radius: 9999px;
-    border: 3px solid #050505;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #D4AF37;
+
+/* Mobile Scrollbar Reset - Eliminates right-side red bar on all mobile viewports */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none !important;
+        width: 0px !important;
+        height: 0px !important;
+    }
+    html, body {
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
 }
 html, body {
     overflow-x: hidden !important;
@@ -1110,32 +1125,96 @@ body {
 
 /* Bento Grid Layout Matrix */
 @media (max-width: 767px) {
+    #sec-14-stage {
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 2rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+
+    #sec-14-sticky {
+        position: relative !important;
+        top: auto !important;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        padding: 0 0.75rem !important;
+    }
+
+    #bento-wrapper {
+        height: auto !important;
+        max-height: none !important;
+        padding: 0 !important;
+    }
+
     #bento-grid-matrix {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        grid-auto-rows: minmax(0, 1fr) !important;
+        grid-auto-rows: auto !important;
+        gap: 0.875rem !important;
+        height: auto !important;
     }
+
     #bento-box-1 {
-        grid-column: span 2 / span 2;
+        order: 1 !important;
+        grid-column: span 2 / span 2 !important;
     }
+
     #center-crimson-card {
-        grid-column: span 2 / span 2;
-        min-height: 135px !important;
+        order: 2 !important;
+        grid-column: span 2 / span 2 !important;
+        min-height: 200px !important;
+        height: 215px !important;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        will-change: auto !important;
     }
-    #bento-box-3 {
-        grid-column: span 1 / span 1;
-    }
+
+    /* Section just above footer: Multi-Social Node with QR Codes (Full-width, spacious 2x2 grid) */
     #bento-box-2 {
-        grid-column: span 1 / span 1;
+        order: 3 !important;
+        grid-column: span 2 / span 2 !important;
+        min-height: auto !important;
+        overflow: visible !important;
     }
+
+    #bento-box-3 {
+        order: 4 !important;
+        grid-column: span 2 / span 2 !important;
+        min-height: auto !important;
+    }
+
     #bento-box-4 {
-        grid-column: span 1 / span 1;
+        order: 5 !important;
+        grid-column: span 1 / span 1 !important;
     }
+
+    #bento-box-6 {
+        order: 6 !important;
+        grid-column: span 1 / span 1 !important;
+    }
+
     #bento-box-5 {
         display: none !important;
     }
-    #bento-box-6 {
-        grid-column: span 1 / span 1;
+
+    /* Rock-Solid Mobile Stability: Prevent all layout jumping, scattering, and opacity flickering */
+    .bento-light-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        will-change: auto !important;
+    }
+
+    #center-crimson-card.is-scaling {
+        z-index: 30 !important;
+        transform: none !important;
+    }
+
+    #center-crimson-card.is-scaling .hero-overlay-content {
+        opacity: 1 !important;
+        pointer-events: auto !important;
     }
 }
 

@@ -1186,6 +1186,34 @@ document.addEventListener("DOMContentLoaded", () => {
         const row3Cards = document.querySelectorAll('.mesh-ruby-5, .mesh-ruby-6');
         let cardsRevealed = false;
 
+        function isMobileView() {
+            return window.innerWidth < 768;
+        }
+
+        // On mobile: keep all cards rock-solid, immediately visible, and prevent flickering
+        function syncMobileCardState() {
+            if (isMobileView()) {
+                [...row1Cards, ...row2Cards, ...row3Cards, heroCard].forEach((card) => {
+                    if (card) {
+                        card.classList.add("is-visible");
+                        card.style.transition = "";
+                        card.style.transform = "";
+                        card.style.opacity = "";
+                        card.style.pointerEvents = "auto";
+                    }
+                });
+                if (heroCard) {
+                    heroCard.classList.remove("is-scaling");
+                    heroCard.style.transform = "";
+                    heroCard.style.borderRadius = "";
+                    if (cardMesh) cardMesh.style.borderRadius = "";
+                    if (heroVideo) heroVideo.style.borderRadius = "";
+                }
+                cardsRevealed = true;
+            }
+        }
+        syncMobileCardState();
+
         // 1. Live IST Operational Clock
         function updateISTClock() {
             const clockEl = document.getElementById("live-ist-clock");
@@ -1208,7 +1236,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         heroCard.classList.add("is-visible");
                         cardsRevealed = true;
                     }, 160);
-                } else if (!entry.isIntersecting && stage.getBoundingClientRect().top > 0) {
+                } else if (!entry.isIntersecting && stage.getBoundingClientRect().top > 0 && !isMobileView()) {
                     [...row1Cards, ...row2Cards, ...row3Cards, heroCard].forEach((card) => {
                         if (card) card.classList.remove("is-visible");
                     });
@@ -1229,8 +1257,28 @@ document.addEventListener("DOMContentLoaded", () => {
             'bottom-right':  { x: 400,  y: 400 }
         };
 
-        // 3. Scroll Zoom Engine with Extended 25% Scroll Cushion
+        // 3. Scroll Zoom Engine with Extended 25% Scroll Cushion (Desktop Only)
         function handleScrollExpansion() {
+            if (isMobileView()) {
+                // Ensure desktop scatter transforms are completely cleared on mobile
+                if (heroCard.classList.contains("is-scaling")) {
+                    heroCard.classList.remove("is-scaling");
+                    heroCard.style.transform = "";
+                    heroCard.style.borderRadius = "";
+                    if (cardMesh) cardMesh.style.borderRadius = "";
+                    if (heroVideo) heroVideo.style.borderRadius = "";
+                }
+                bentoCards.forEach((card) => {
+                    if (card.style.transform || card.style.opacity) {
+                        card.style.transition = "";
+                        card.style.transform = "";
+                        card.style.opacity = "";
+                        card.style.pointerEvents = "auto";
+                    }
+                });
+                return;
+            }
+
             if (!cardsRevealed) return;
 
             const stageRect = stage.getBoundingClientRect();
@@ -1304,6 +1352,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     isTicking = false;
                 });
                 isTicking = true;
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (isMobileView()) {
+                syncMobileCardState();
             }
         });
 
